@@ -1,0 +1,8 @@
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Commond.deps.json
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Commond.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.AssemblyInfoInputs.cache
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.AssemblyInfo.cs
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csprojAssemblyReference.cache
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Commond.pdb
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.pdb

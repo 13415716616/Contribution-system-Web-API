@@ -1,0 +1,8 @@
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\bin\Debug\netstandard2.0\Contribution-system-Models.deps.json
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\bin\Debug\netstandard2.0\Contribution-system-Models.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\bin\Debug\netstandard2.0\Contribution-system-Models.pdb
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.csprojAssemblyReference.cache
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.AssemblyInfoInputs.cache
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.AssemblyInfo.cs
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.pdb

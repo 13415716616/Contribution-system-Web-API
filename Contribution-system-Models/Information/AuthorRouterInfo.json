@@ -1,0 +1,116 @@
+﻿[
+  {
+    "name": "dashboard",
+    "parentId": 0,
+    "id": 1,
+    "meta": {
+      "icon": "dashboard",
+      "title": "仪表盘",
+      "show": true
+    },
+    "component": "RouteView",
+    "redirect": "/dashboard/workplace"
+  },
+  {
+    "name": "workplace",
+    "parentId": 1,
+    "id": 7,
+    "meta": {
+      "title": "工作台",
+      "show": true
+    },
+    "component": "Workplace"
+  },
+  {
+    "name": "monitor",
+    "path": "https://www.baidu.com/",
+    "parentId": 1,
+    "id": 3,
+    "meta": {
+      "title": "监控页（外部）",
+      "target": "_blank",
+      "show": true
+    }
+  },
+  {
+    "name": "Analysis",
+    "parentId": 1,
+    "id": 2,
+    "meta": {
+      "title": "分析页",
+      "show": true
+    },
+    "component": "Analysis",
+    "path": "/dashboard/analysis"
+  },
+  {
+    "name": "tests",
+    "parentId": 1,
+    "id": 8,
+    "meta": {
+      "title": "测试功能",
+      "show": true
+    },
+    "component": "TestWork"
+  },
+  {
+    "name": "Manuscript",
+    "parentId": 0,
+    "id": 10,
+    "meta": {
+      "icon": "form",
+      "title": "稿件管理"
+    },
+    "redirect": "/Manuscript/ContributePage",
+    "component": "PageView"
+  },
+  {
+
+    "name": "ContributePage",
+    "parentId": 10,
+    "id": 101,
+    "meta": {
+      "title": "在线投稿",
+      "show": true
+    },
+    "component": "ContributePage"
+  },
+  {
+    "name": "form",
+    "parentId": 0,
+    "id": 20,
+    "meta": {
+      "icon": "form",
+      "title": "表单页"
+    },
+    "redirect": "/form/base-form",
+    "component": "PageView"
+  },
+  {
+    "name": "basic-form",
+    "parentId": 20,
+    "id": 6,
+    "meta": {
+      "title": "基础表单"
+    },
+    "component": "BasicForm"
+  },
+  {
+    "name": "step-form",
+    "parentId": 20,
+    "id": 5,
+    "meta": {
+      "title": "分步表单"
+    },
+    "component": "StepForm"
+  },
+  {
+    "name": "advanced-form",
+    "parentId": 20,
+    "id": 4,
+    "meta": {
+      "title": "高级表单"
+    },
+    "component": "AdvanceForm"
+  }
+]
