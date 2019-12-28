@@ -119,11 +119,14 @@ E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcor
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Contribution-system-Models.pdb
-E:\Project\毕业设计\Contribution-system\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.MvcApplicationPartsAssemblyInfo.cs
-E:\Project\毕业设计\Contribution-system\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.MvcApplicationPartsAssemblyInfo.cache
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Contribution-system-Commond.dll
 E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Contribution-system-Commond.pdb
+E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Project\毕业设计\Contribution-system\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.MvcApplicationPartsAssemblyInfo.cs
+E:\Project\毕业设计\Contribution-system\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.MvcApplicationPartsAssemblyInfo.cache

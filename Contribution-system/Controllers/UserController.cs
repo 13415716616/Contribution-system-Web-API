@@ -1,11 +1,13 @@
 ﻿using Contribution_system_Commond;
 using Contribution_system_Models.Models;
 using Contribution_system_Models.WebModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
+using System.Security.Claims;
 
 namespace Contribution_system.Controllers
 {
@@ -66,19 +68,31 @@ namespace Contribution_system.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// 获取路由
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
+        [Authorize]
         public string Login()
         {
             string text = System.IO.File.ReadAllText(InfoPath.AuthorRouterInfo);
             return text;
         }
 
+        /// <summary>
+        /// 获取权限信息
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("info")]
+        [Authorize]
         public string getinfo()
         {
+            var userid = User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.Authors.FirstOrDefault(b => b.Author_ID.Equals(userid));
             UserRoleInfo userRole = new UserRoleInfo();
-            userRole.id = "4291d7da9005377ec9aec4a71ea837f";
-            userRole.name = "天野远子";
+            userRole.id = userid;
+            userRole.name = info.Author_Name;
             userRole.avatar = "/avatar2.jpg";
             Console.WriteLine(InfoPath.ModelsPath);
             userRole.role =JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));

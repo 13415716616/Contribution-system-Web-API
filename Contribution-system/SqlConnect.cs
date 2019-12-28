@@ -16,5 +16,6 @@ namespace Contribution_system
 
         public DbSet<Author> Authors { get; set; }
 
+        public DbSet<Manuscript> Manuscript { get; set; }
     }
 }

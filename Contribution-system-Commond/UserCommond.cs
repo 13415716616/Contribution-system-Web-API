@@ -36,11 +36,11 @@ namespace Contribution_system_Commond
             {
                 new Claim(ClaimTypes.Name,username),
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("1234567890123456"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("qpb9Ao1VxCjWAXWM25aHaCwVVYX7bZX3"));
             var token = new JwtSecurityToken(
-                issuer: "http://localhost:5001",
-                audience: "http://localhost:8000",
-                claims: claims,
+                issuer: "Contribution-system_Asp_Net_Core",  //颁发者
+                audience: "Contribution-system_Vue", //接收者
+                claims: claims,   //身份数据
                 notBefore: DateTime.Now,
                 expires: DateTime.Now.AddHours(1),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
