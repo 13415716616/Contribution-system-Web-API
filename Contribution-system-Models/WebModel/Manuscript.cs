@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Contribution_system_Models.WebModel
 {
-    public class Manuscript
+    public class ManuscriptModel
     {
          public enum ManuscriptMode
         {
@@ -13,5 +13,6 @@ namespace Contribution_system_Models.WebModel
             UploadFile=2,
             Complete=3
         }
+
     }
 }

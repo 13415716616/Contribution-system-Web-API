@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using static Contribution_system_Models.WebModel.Manuscript;
+using static Contribution_system_Models.WebModel.ManuscriptModel;
 
 namespace Contribution_system_Models.Models
 {

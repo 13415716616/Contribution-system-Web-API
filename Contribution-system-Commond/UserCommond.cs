@@ -42,7 +42,7 @@ namespace Contribution_system_Commond
                 audience: "Contribution-system_Vue", //接收者
                 claims: claims,   //身份数据
                 notBefore: DateTime.Now,
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddHours(23),   //Token持续时间
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
             );
             var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
