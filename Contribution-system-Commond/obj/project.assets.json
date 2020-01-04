@@ -3632,19 +3632,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Qi xiaozhi\\.nuget\\packages\\": {}
+    "C:\\Users\\wuwei\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project\\毕业设计\\Contribution-system\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
+      "projectUniqueName": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
       "projectName": "Contribution-system-Commond",
-      "projectPath": "E:\\Project\\毕业设计\\Contribution-system\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
-      "packagesPath": "C:\\Users\\Qi xiaozhi\\.nuget\\packages\\",
-      "outputPath": "E:\\Project\\毕业设计\\Contribution-system\\Contribution-system-Commond\\obj\\",
+      "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
+      "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
+      "outputPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Qi xiaozhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

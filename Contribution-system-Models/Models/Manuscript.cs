@@ -17,6 +17,17 @@ public class Manuscript
         public string Manuscript_Abstract { get; set; }
         public string Manuscript_Reference { get; set; }
         public string Manuscript_Text { get; set; }
+        public string Manuscript_MainDataPath { get; set; }
+        public string Manuscript_OtherDataPath { get; set; }
         public ManuscriptMode Manuscript_Status { get; set; }
+        public string Author_name { get; set; }
+
+        public string Author_sex { get; set; }
+
+        public string Author_Phone { get; set; }
+
+        public string Author_Address { get; set; }
+
+        public string Author_dec { get; set; }
     }
 }
