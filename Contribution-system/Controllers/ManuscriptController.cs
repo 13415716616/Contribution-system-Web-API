@@ -122,7 +122,7 @@ namespace Contribution_system.Controllers
         }
 
         [HttpPost("AddAuthor")]
-        public IActionResult AddaAuthor([FromBody] ManuscriptAuthor author)
+        public IActionResult AddaAuthor([FromBody] Contribution_system_Models.WebModel.ManuscriptAuthor author)
         {
             try
             {
@@ -148,6 +148,15 @@ namespace Contribution_system.Controllers
         {
             var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID.Equals(id));
             return Ok(info);
+        }
+
+        [HttpGet("ManuscriptToDrafts")]
+        [Authorize]
+        public IActionResult ManuscriptToDrafts()
+        {
+            var userid = User.FindFirst(ClaimTypes.Name)?.Value;
+            List<Manuscript> manuscripts = sqlConnect.Manuscript.Where(b=>b.Author_ID.Equals(userid)).ToList();
+            return Ok(manuscripts);
         }
     }
 }

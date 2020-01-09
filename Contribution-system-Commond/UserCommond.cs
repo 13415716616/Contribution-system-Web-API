@@ -30,11 +30,12 @@ namespace Contribution_system_Commond
             return sb.ToString();
         }
 
-        static public string SetToken(string username)
+        static public string SetToken(string username,string Role)
         {
             var claims = new Claim[]
             {
                 new Claim(ClaimTypes.Name,username),
+                new Claim(ClaimTypes.Role,Role)
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("qpb9Ao1VxCjWAXWM25aHaCwVVYX7bZX3"));
             var token = new JwtSecurityToken(
