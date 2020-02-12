@@ -55,8 +55,13 @@ namespace Contribution_system.Controllers
         {
             try
             {
-                var editorinfo = sqlConnect.Editors.FirstOrDefault(a => a.Editor_ID.Equals("aaa111"));
-                var aaa = UserCommond.GetMD5Hash(editorinfo.Editor_Password);
+                var chiefeditor = sqlConnect.ChiefEditor.FirstOrDefault(c => c.ChiefEditor_ID.Equals(loginInfo.username));
+                if (chiefeditor != null && UserCommond.GetMD5Hash(chiefeditor.ChiefEditor_Password).Equals(loginInfo.password))
+                {
+                    var token = UserCommond.SetToken(loginInfo.username, "ChiefEditor");
+                    return Ok(token);
+                }
+                var editorinfo = sqlConnect.Editors.FirstOrDefault(a => a.Editor_ID.Equals(loginInfo.username));
                 if (editorinfo!=null&&UserCommond.GetMD5Hash(editorinfo.Editor_Password).Equals(loginInfo.password))
                 {
                     var token = UserCommond.SetToken(loginInfo.username,"Editor");
@@ -81,10 +86,12 @@ namespace Contribution_system.Controllers
         /// <returns></returns>
         [HttpGet]
         [Authorize]
-        public string Login()
+        public string Login() 
         {
             var Role = User.FindFirst(ClaimTypes.Role)?.Value;
             string text="";
+            if(Role.Equals("ChiefEditor"))
+                text = System.IO.File.ReadAllText(InfoPath.ChiefEditorRouterInfo);
             if (Role.Equals("Editor"))
                 text = System.IO.File.ReadAllText(InfoPath.EditorRouterinfo);
             if (Role.Equals("Author"))
@@ -102,6 +109,18 @@ namespace Contribution_system.Controllers
         {
             var userid = User.FindFirst(ClaimTypes.Name)?.Value;
             var role = User.FindFirst(ClaimTypes.Role)?.Value;
+            if (role.Equals("ChiefEditor"))
+            {
+                var info = sqlConnect.ChiefEditor.FirstOrDefault(b => b.ChiefEditor_ID.Equals(userid));
+                UserRoleInfo userRole = new UserRoleInfo();
+                userRole.id = userid;
+                userRole.name = info.ChiefEditor_Name;
+                userRole.avatar = "/avatar2.jpg";
+                Console.WriteLine(InfoPath.ModelsPath);
+                userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));
+                var s = JsonConvert.SerializeObject(userRole);
+                return JsonConvert.SerializeObject(userRole);
+            }
             if (role.Equals("Author"))
             {
                 var info = sqlConnect.Authors.FirstOrDefault(b => b.Author_ID.Equals(userid));

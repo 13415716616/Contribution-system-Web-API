@@ -78,7 +78,7 @@
   {
 
     "name": "ManuscriptDrafts",
-    "parentId": 10,
+    "parentId": 10,   
     "id": 102,
     "meta": {
       "title": "草稿箱",
@@ -96,6 +96,17 @@
       "show": true
     },
     "component": "ManuscriptSubmitted"
+  },
+  {
+
+    "name": "ShowManscript",
+    "parentId": 10,
+    "id": 104,
+    "meta": {
+      "title": "查看稿件",
+      "show": false
+    },
+    "component": "ShowManscript"
   },
   {
     "name": "form",

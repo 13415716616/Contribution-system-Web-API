@@ -27,6 +27,8 @@ namespace Contribution_system_Models.WebModel
 
         static public string AuthorRole = ModelsPath + "Information\\AuthorRole.json";
 
+        static public string ChiefEditorRouterInfo = ModelsPath + "Information\\ChiefEditorRouterInfo.json";
+
         static public class getpath
         {
             static public string path(string path)

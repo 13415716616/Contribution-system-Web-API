@@ -22,38 +22,6 @@
     "component": "Workplace"
   },
   {
-    "name": "monitor",
-    "path": "https://www.baidu.com/",
-    "parentId": 1,
-    "id": 3,
-    "meta": {
-      "title": "监控页（外部）",
-      "target": "_blank",
-      "show": true
-    }
-  },
-  {
-    "name": "Analysis",
-    "parentId": 1,
-    "id": 2,
-    "meta": {
-      "title": "分析页",
-      "show": true
-    },
-    "component": "Analysis",
-    "path": "/dashboard/analysis"
-  },
-  {
-    "name": "tests",
-    "parentId": 1,
-    "id": 8,
-    "meta": {
-      "title": "测试功能",
-      "show": true
-    },
-    "component": "TestWork"
-  },
-  {
     "name": "EditorManuscript",
     "parentId": 0,
     "id": 10,
@@ -68,7 +36,7 @@
   {
     "name": "ManuscriptReview",
     "parentId": 10,
-    "id": 12,
+    "id": 11,
     "meta": {
       "title": "审查稿件",
       "show": true
@@ -86,6 +54,26 @@
     },
     "component": "ManuscriptEnquiry",
     "path": "/EditorManuscript/ManuscriptEnquiry"
+  },
+  {
+    "name": "ShowEditManuscript",
+    "parentId": 10,
+    "id": 13,
+    "meta": {
+      "title": "查看稿件",
+      "show": true
+    },
+    "component": "ShowEditManuscript"
+  },
+  {
+    "name": "CommentManuscript",
+    "parentId": 10,
+    "id": 15,
+    "meta": {
+      "title": "评论稿件",
+      "show": true
+    },
+    "component": "CommentManuscript"
   },
   {
     "name": "account",
