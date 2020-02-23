@@ -262,3 +262,15 @@ E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debu
 E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.pdb
 E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.MvcApplicationPartsAssemblyInfo.cs
 E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.MvcApplicationPartsAssemblyInfo.cache
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll

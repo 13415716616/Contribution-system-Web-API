@@ -14,3 +14,6 @@ E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\
 E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.AssemblyInfo.cs
 E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.dll
 E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.pdb
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Models.dll
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Models.pdb
+E:\project\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csproj.CopyComplete

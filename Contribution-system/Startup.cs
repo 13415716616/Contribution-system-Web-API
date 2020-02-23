@@ -37,6 +37,8 @@ namespace Contribution_system
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "在线投稿系统API", Version = "v1" });
             });
 
+            services.AddDbContext<SqlConnect>(option => option.UseSqlServer(Configuration.GetConnectionString("ContributionSystem")));
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
             {
                 var jwtSetting = new jwtSetting();
@@ -50,9 +52,6 @@ namespace Contribution_system
                     ClockSkew = TimeSpan.Zero
                 };
             });
-
-            services.AddDbContext<SqlConnect>(option => option.UseSqlServer(Configuration.GetConnectionString("ContributionSystem")));
-
             services.AddCors(options => options.AddPolicy("MSCors", p => p.WithOrigins("http://localhost:8000")
                     .AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
         }

@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Contribution_system_Commond.Page;
+using Contribution_system_Models;
+using Contribution_system_Models.Models;
+using Contribution_system_Models.WebModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Contribution_system_Models.Models;
-using Microsoft.AspNetCore.Authorization;
-using static Contribution_system_Models.WebModel.ManuscriptModel;
-using System.Security.Claims;
-using Contribution_system_Models.WebModel;
+using Microsoft.AspNetCore.StaticFiles;
+using System;
+using System.Collections.Generic;
 using System.IO;
-using Microsoft.Extensions.Primitives;
+using System.Linq;
+using System.Security.Claims;
 
 namespace Contribution_system.Controllers
 {
@@ -25,141 +25,53 @@ namespace Contribution_system.Controllers
             this.sqlConnect = sqlConnect;
         }
 
+        //添加新的稿件信息
         [HttpPost]
         [Authorize]
         public IActionResult AddManuscript(Manuscript manuscript)
         {
-            try { 
-                manuscript.Manuscript_Status = ManuscriptMode.WriteInfo;
-                manuscript.Author_ID = User.FindFirst(ClaimTypes.Name)?.Value;
-                sqlConnect.Manuscript.Add(manuscript);
-                sqlConnect.SaveChanges();
-                return Ok(manuscript.Manuscript_ID);
-            }catch(Exception e)
+            string author_id=manuscript.Author_ID = User.FindFirst(ClaimTypes.Name)?.Value;
+            if (AuthorManuscriptPageAPI.AddNewManuscript(manuscript, author_id))
             {
-                Console.WriteLine(e);
-                return BadRequest();
+                return Ok();
             }
+            else
+                return BadRequest();
         }
 
+        //上传主要的稿件
         [HttpPost("uploadmain")]
         [Authorize]
         public IActionResult UploadDataMain([FromForm] IFormFile file)
         {
-            //StringValues value1;
-            //Request.Headers.TryGetValue("ManuscriptID", out value1);
-            try { 
-                var a =int.Parse(Request.Headers["ManuscriptID"]);
-                var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID==a);
-                var userid = User.FindFirst(ClaimTypes.Name)?.Value;
-                var fpath = InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid;           
-                if (!Directory.Exists(fpath))
-                {
-                    Directory.CreateDirectory(fpath);
-                }
-                var spath=fpath+ "\\" + a;
-                if (!Directory.Exists(spath))
-                {
-                    Directory.CreateDirectory(spath);
-                }
-                var mpath = spath + "\\主要稿件\\";
-                if (!Directory.Exists(mpath))
-                {
-                    Directory.CreateDirectory(mpath);
-                }
-                FileStream stream = new FileStream(InfoPath.ModelsPath+"wwwroot\\File\\Manuscript\\" + userid + "\\"+a+ "\\主要稿件\\" + file.FileName, FileMode.Create);
-                file.CopyTo(stream);
-                manuscript.Manuscript_MainDataPath = "wwwroot\\File\\Manuscript\\" + userid + "\\" + a + "\\主要稿件\\" + file.FileName;
-                manuscript.Manuscript_Status = ManuscriptMode.UploadFile;
-                sqlConnect.Update(manuscript);
-                sqlConnect.SaveChanges();
+            var a = int.Parse(Request.Headers["ManuscriptID"]);
+            var userid = User.FindFirst(ClaimTypes.Name)?.Value;
+            if (AuthorManuscriptPageAPI.AddMainManuscriptUpload(file, a, userid))
                 return Ok();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            return BadRequest();
+            else
+                return BadRequest();
         }
 
         [HttpPost("uploadother")]
         [Authorize]
         public IActionResult UploadDataOther([FromForm] IFormFile file)
         {
-            //StringValues value1;
-            //Request.Headers.TryGetValue("ManuscriptID", out value1);
-            try
-            {
-                var a = int.Parse(Request.Headers["ManuscriptID"]);
-                var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == a);
-                var userid = User.FindFirst(ClaimTypes.Name)?.Value;
-                var fpath = InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid;
-                if (!Directory.Exists(fpath))
-                {
-                    Directory.CreateDirectory(fpath);
-                }
-                var spath = fpath + "\\" + a;
-                if (!Directory.Exists(spath))
-                {
-                    Directory.CreateDirectory(spath);
-                }
-                var mpath = spath + "\\其他资料\\";
-                if (!Directory.Exists(mpath))
-                {
-                    Directory.CreateDirectory(mpath);
-                }
-                FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid + "\\" + a + "\\其他资料\\" + file.FileName, FileMode.Create);
-                file.CopyTo(stream);
-                manuscript.Manuscript_OtherDataPath = "wwwroot\\File\\Manuscript\\" + userid + "\\" + a + "\\其他资料\\" + file.FileName;
-                manuscript.Manuscript_Status = ManuscriptMode.UploadFile;
-                sqlConnect.Update(manuscript);
-                sqlConnect.SaveChanges();
+            var a = int.Parse(Request.Headers["ManuscriptID"]);
+            var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == a);
+            var userid = User.FindFirst(ClaimTypes.Name)?.Value;
+            if (AuthorManuscriptPageAPI.AddOtherManuscriptUpload(file, a, userid))
                 return Ok();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            return BadRequest();
+            else
+                return BadRequest();
         }
 
+        //给稿件添加作者信息
         [HttpPost("AddAuthor")]
         public IActionResult AddaAuthor([FromBody] Contribution_system_Models.WebModel.ManuscriptAuthor author)
         {
-            try
-            {
-                var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID.Equals(author.Manscript_ID));
-                info.Author_name = author.Author_name;
-                info.Author_sex = author.Author_sex;
-                info.Author_Phone = author.Author_Phone;
-                info.Author_Address = author.Author_Address;
-                info.Author_dec = author.Author_dec;
-                info.Manuscript_Status = ManuscriptMode.Complete;
-                sqlConnect.Update(info);
-                sqlConnect.SaveChanges();
-                ManuscriptReview review = new ManuscriptReview();
-                review.ManuscriptReview_Title = info.Manuscript_Title;
-                review.ManuscriptReview_Etitle = info.Manuscript_Etitle;
-                review.ManuscriptReview_Keyword = info.Manuscript_Keyword;
-                review.ManuscriptReview_Reference = info.Manuscript_Reference;
-                review.ManuscriptReview_Abstract = info.Manuscript_Abstract;
-                review.ManuscriptReview_Text = info.Manuscript_Text;
-                review.ManuscriptReview_MainDataPath = info.Manuscript_MainDataPath;
-                review.ManuscriptReview_OtherDataPath = info.Manuscript_OtherDataPath;
-                review.Author_name = info.Author_name;
-                review.Author_Phone = info.Author_Phone;
-                review.Author_sex = info.Author_sex;
-                review.Author_Address = info.Author_Address;
-                review.Author_dec = info.Author_dec;
-                sqlConnect.ManuscriptReview.Add(review);
-                sqlConnect.SaveChanges();
+            if (AuthorManuscriptPageAPI.AddManuscriptAuthor(author))
                 return Ok();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            return BadRequest();
+            else return BadRequest();
         }
 
         /// <summary>
@@ -203,6 +115,26 @@ namespace Contribution_system.Controllers
                 Console.WriteLine(e);
                 return BadRequest();
             }
+        }
+
+        [HttpGet("GetFile")]
+        public IActionResult GetFile(int id)
+        {
+            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
+            var provider = new FileExtensionContentTypeProvider();
+            var file = InfoPath.ModelsPath + info.Manuscript_MainDataPath;
+            var fileName = Path.GetFileName(file);
+            var ext = Path.GetExtension(fileName);
+            var stream = System.IO.File.OpenRead(file);
+            var contentType = provider.Mappings[ext];
+            return File(stream, contentType, fileName);
+        }
+
+        [HttpGet("GetCompleteManuscrit")]
+        public IActionResult GetCompleteManuscrit()
+        {
+            var info = sqlConnect.CompleteManuscript.ToList();
+            return Ok(info);
         }
     }
 }

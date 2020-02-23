@@ -76,6 +76,16 @@
     "component": "CommentManuscript"
   },
   {
+    "name": "FirstComplete",
+    "parentId": 10,
+    "id": 16,
+    "meta": {
+      "title": "评论稿件",
+      "show": true
+    },
+    "component": "FirstComplete"
+  },
+  {
     "name": "account",
     "parentId": 0,
     "id": 10028,

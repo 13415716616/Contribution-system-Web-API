@@ -55,6 +55,46 @@
     "component": "SelectManuscript"
   },
   {
+    "name": "ShowChiefManuscript",
+    "parentId": 3,
+    "id": 32,
+    "meta": {
+      "title": "查看稿件",
+      "show": false
+    },
+    "component": "ShowChiefManuscript"
+  },
+  {
+    "name": "CommentChiefManuscript",
+    "parentId": 3,
+    "id": 33,
+    "meta": {
+      "title": "查看评论",
+      "show": false
+    },
+    "component": "CommentChiefManuscript"
+  },
+  {
+    "name": "CompleteManuscript",
+    "parentId": 3,
+    "id": 34,
+    "meta": {
+      "title": "稿件通过",
+      "show": false
+    },
+    "component": "CompleteManuscript"
+  },
+  {
+    "name": "ShowCompleteManuscript",
+    "parentId": 3,
+    "id": 35,
+    "meta": {
+      "title": "通过稿件",
+      "show": true
+    },
+    "component": "ShowCompleteManuscript"
+  },
+  {
     "name": "form",
     "parentId": 0,
     "id": 20,

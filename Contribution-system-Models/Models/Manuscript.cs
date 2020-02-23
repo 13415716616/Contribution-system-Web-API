@@ -6,7 +6,7 @@ using static Contribution_system_Models.WebModel.ManuscriptModel;
 
 namespace Contribution_system_Models.Models
 {
-public class Manuscript
+    public class Manuscript
     {
         [Key]
         public int Manuscript_ID { get; set; }
@@ -25,5 +25,6 @@ public class Manuscript
         public string Author_Phone { get; set; }
         public string Author_Address { get; set; }
         public string Author_dec { get; set; }
+        public string Editor_Time { get; set; }
     }
 }

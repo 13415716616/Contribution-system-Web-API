@@ -19,5 +19,9 @@ namespace Contribution_system_Models.Models
         public string Author_Email { get; set; }
 
         public string Author_Dec { get; set; }
+
+        public string Author_Address { get; set; }
+
+        public string Author_tags { get; set; }
     }
 }

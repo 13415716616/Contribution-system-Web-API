@@ -78,7 +78,7 @@
   {
 
     "name": "ManuscriptDrafts",
-    "parentId": 10,   
+    "parentId": 10,
     "id": 102,
     "meta": {
       "title": "草稿箱",
@@ -108,6 +108,40 @@
     },
     "component": "ShowManscript"
   },
+  {
+
+    "name": "ShowEditorInfo",
+    "parentId": 10,
+    "id": 105,
+    "meta": {
+      "title": "查看留言",
+      "show": true
+    },
+    "component": "ShowEditorInfo"
+  },
+  {
+
+    "name": "AuthorCompleteManuscript",
+    "parentId": 10,
+    "id": 106,
+    "meta": {
+      "title": "通过稿件",
+      "show": true
+    },
+    "component": "AuthorCompleteManuscript"
+  },
+  {
+
+    "name": "ShowAuthorCompleteManuscript",
+    "parentId": 10,
+    "id": 107,
+    "meta": {
+      "title": "查看稿件",
+      "show": true
+    },
+    "component": "ShowAuthorCompleteManuscript"
+  },
+
   {
     "name": "form",
     "parentId": 0,
@@ -178,12 +212,12 @@
       "hideChildren": true,
       "show": true
     },
-    "redirect": "/account/settings/base",
+    "redirect": "/account/settings/BaseSettings",
     "component": "AccountSettings"
   },
   {
     "name": "BaseSettings",
-    "path": "/account/settings/base",
+    "path": "/account/settings/BaseSettings",
     "parentId": 10030,
     "id": 10031,
     "meta": {

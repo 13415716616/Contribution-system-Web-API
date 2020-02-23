@@ -6,6 +6,7 @@ namespace Contribution_system_Models.WebModel
 {
     public class CommentInfo
     {
+        
         public int manscriptid { get; set; }
         public string name { get; set; }
         public string role { get; set; }
@@ -13,4 +14,5 @@ namespace Contribution_system_Models.WebModel
         public string comment { get; set; }
         public string time { get; set; }
     }
+
 }
