@@ -119,46 +119,7 @@
       "show": false
     },
     "component": "ShowAuthorCompleteManuscript"
-  },
-
-  {
-    "name": "form",
-    "parentId": 0,
-    "id": 20,
-    "meta": {
-      "icon": "form",
-      "title": "表单页"
-    },
-    "redirect": "/form/base-form",
-    "component": "PageView"
-  },
-  {
-    "name": "basic-form",
-    "parentId": 20,
-    "id": 6,
-    "meta": {
-      "title": "基础表单"
-    },
-    "component": "BasicForm"
-  },
-  {
-    "name": "step-form",
-    "parentId": 20,
-    "id": 5,
-    "meta": {
-      "title": "分步表单"
-    },
-    "component": "StepForm"
-  },
-  {
-    "name": "advanced-form",
-    "parentId": 20,
-    "id": 4,
-    "meta": {
-      "title": "高级表单"
-    },
-    "component": "AdvanceForm"
-  },
+  },  
   {
     "name": "account",
     "parentId": 0,

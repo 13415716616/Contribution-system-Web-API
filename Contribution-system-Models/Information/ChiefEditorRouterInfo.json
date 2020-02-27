@@ -95,6 +95,16 @@
     "component": "ShowCompleteManuscript"
   },
   {
+    "name": "MyReviewManuscript",
+    "parentId": 3,
+    "id": 36,
+    "meta": {
+      "title": "我审核中稿件",
+      "show": true
+    },
+    "component": "MyReviewManuscript"
+  },
+  {
     "name": "form",
     "parentId": 0,
     "id": 20,

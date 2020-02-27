@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Contribution_system_Models;
 using Contribution_system_Models.Models;
@@ -50,6 +51,14 @@ namespace Contribution_system.Controllers
             sqlConnect.CompleteManuscript.Add(manuscript);
             sqlConnect.SaveChanges();
             return Ok();
+        }
+
+        [HttpGet("GetReviewManuscript")]
+        public IActionResult GetReviewManuscript()
+        {
+            var id= User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.ManuscriptReview.Where(b => b.ChiefEditor_ID == id && b.ManuscriptReview_Status == "主编审查中");
+            return Ok(info);
         }
     }
 }

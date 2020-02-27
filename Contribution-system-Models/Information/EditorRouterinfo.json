@@ -61,7 +61,7 @@
     "id": 13,
     "meta": {
       "title": "查看稿件",
-      "show": true
+      "show": false
     },
     "component": "ShowEditManuscript"
   },
@@ -71,7 +71,7 @@
     "id": 15,
     "meta": {
       "title": "评论稿件",
-      "show": true
+      "show": false
     },
     "component": "CommentManuscript"
   },
@@ -81,7 +81,7 @@
     "id": 16,
     "meta": {
       "title": "评论稿件",
-      "show": true
+      "show": false
     },
     "component": "FirstComplete"
   },

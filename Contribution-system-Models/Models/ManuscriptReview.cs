@@ -24,6 +24,7 @@ namespace Contribution_system_Models.Models
         public string Author_Address { get; set; }
         public string Author_dec { get; set; }
         public string Editor_ID { get; set; }
+        public string ChiefEditor_ID { get; set; }
         public string ManuscriptReview_Time { get; set; }
         public string ManuscriptReview_Status { get; set; }
         public string ManuscriptReview_First_Info { get; set; }

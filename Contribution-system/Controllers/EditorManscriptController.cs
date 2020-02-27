@@ -62,6 +62,9 @@ namespace Contribution_system.Controllers
                 infos.Add(commentinfo);
                 var s = JsonConvert.SerializeObject(infos);
                 info.ManuscriptReview_First_Info = s;
+                bool test = commentinfo.role.Equals("ChiefEditor");
+                if (commentinfo.role.Equals("ChiefEditor"))
+                    info.ManuscriptReview_Status = "主编审查中";
                 sqlConnect.Update(info);
                 sqlConnect.SaveChanges();
                 return Ok();
