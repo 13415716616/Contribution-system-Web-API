@@ -23,6 +23,7 @@ namespace Contribution_system.Controllers
             sqlConnect = _sqlConnect;
         }
 
+        //获取用户所有投稿的稿件
         [HttpGet]
         public IActionResult GetAllManuscript()
         {

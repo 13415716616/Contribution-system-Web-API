@@ -15,19 +15,19 @@ namespace Contribution_system_Models.WebModel
 
     static public class InfoPath
     {
-        static public string ModelsPath = getpath.path(System.Environment.CurrentDirectory) + "\\Contribution-system-Models\\";
+        static public string ModelsPath = getpath.path(System.Environment.CurrentDirectory) + "/Contribution-system-Models/";
 
-        static public string RouterInfo = ModelsPath + "Information\\RouterInfo.json";
+        static public string RouterInfo = ModelsPath + "Information/RouterInfo.json";
 
-        static public string Role = ModelsPath + "Information\\Role.json";
+        static public string Role = ModelsPath + "Information/Role.json";
 
-        static public string AuthorRouterInfo=ModelsPath + "Information\\AuthorRouterInfo.json";
+        static public string AuthorRouterInfo=ModelsPath + "Information/AuthorRouterInfo.json";
 
-        static public string EditorRouterinfo= ModelsPath + "Information\\EditorRouterinfo.json";
+        static public string EditorRouterinfo= ModelsPath + "Information/EditorRouterinfo.json";
 
-        static public string AuthorRole = ModelsPath + "Information\\AuthorRole.json";
+        static public string AuthorRole = ModelsPath + "Information/AuthorRole.json";
 
-        static public string ChiefEditorRouterInfo = ModelsPath + "Information\\ChiefEditorRouterInfo.json";
+        static public string ChiefEditorRouterInfo = ModelsPath + "Information/ChiefEditorRouterInfo.json";
 
         static public class getpath
         {

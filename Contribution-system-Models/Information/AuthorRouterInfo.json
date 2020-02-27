@@ -22,17 +22,6 @@
     "component": "Workplace"
   },
   {
-    "name": "monitor",
-    "path": "https://www.baidu.com/",
-    "parentId": 1,
-    "id": 3,
-    "meta": {
-      "title": "监控页（外部）",
-      "target": "_blank",
-      "show": true
-    }
-  },
-  {
     "name": "Analysis",
     "parentId": 1,
     "id": 2,
@@ -42,16 +31,6 @@
     },
     "component": "Analysis",
     "path": "/dashboard/analysis"
-  },
-  {
-    "name": "tests",
-    "parentId": 1,
-    "id": 8,
-    "meta": {
-      "title": "测试功能",
-      "show": true
-    },
-    "component": "TestWork"
   },
   {
     "name": "Manuscript",
@@ -115,7 +94,7 @@
     "id": 105,
     "meta": {
       "title": "查看留言",
-      "show": true
+      "show": false
     },
     "component": "ShowEditorInfo"
   },
@@ -137,7 +116,7 @@
     "id": 107,
     "meta": {
       "title": "查看稿件",
-      "show": true
+      "show": false
     },
     "component": "ShowAuthorCompleteManuscript"
   },

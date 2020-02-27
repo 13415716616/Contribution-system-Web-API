@@ -1,34 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj": {}
+    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj": {}
   },
   "projects": {
-    "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj": {
+    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
+        "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
         "projectName": "Contribution-system-Commond",
-        "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
-        "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
-        "outputPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\obj\\",
+        "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
+        "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
+        "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
-                "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj"
+              "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
+                "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
               }
             }
           }
@@ -79,28 +77,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
+    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj",
+        "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
         "projectName": "Contribution-system-Models",
-        "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj",
-        "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
-        "outputPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\obj\\",
+        "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
+        "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
+        "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,38 +146,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj": {
+    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj",
+        "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj",
         "projectName": "Contribution-system",
-        "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj",
-        "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
-        "outputPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\obj\\",
+        "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj",
+        "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
+        "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj": {
-                "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj"
+              "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj": {
+                "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj"
               },
-              "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
-                "projectPath": "E:\\project\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj"
+              "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
+                "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
               }
             }
           }
@@ -234,7 +228,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{1710977E-B7B1-4C2C-B319-44AC0C78A475}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Contribution-system/Controllers/PersonalController.cs" Line="13" Column="18" />
+      <File FileName="Contribution-system/WeatherForecast.cs" />
+      <File FileName="Contribution-system/Startup.cs" />
+      <File FileName="Contribution-system/Program.cs" />
+      <File FileName="Contribution-system/appsettings.json" />
+      <File FileName="Contribution-system/Controllers/UserController.cs" Line="43" Column="1" />
+      <File FileName="Contribution-system-Models/WebModel/EditorManscript.cs" Line="1" Column="1" />
+      <File FileName="Contribution-system-Models/Information/AuthorRouterInfo.json" Line="34" Column="5" />
+      <File FileName="Contribution-system/Controllers/ManuscriptReviewController.cs" Line="32" Column="78" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Contribution-system" expanded="True" selected="True">
+            <Node name="Contribution-system" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="Contribution-system-Models" expanded="True">
+              <Node name="Information" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="WebModel" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Contribution-system PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
