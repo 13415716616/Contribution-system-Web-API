@@ -120,9 +120,9 @@ namespace Contribution_system.Controllers
         [HttpGet("GetFile")]
         public IActionResult GetFile(int id)
         {
-            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
+            var info = sqlConnect.ManuscriptReview.FirstOrDefault(b => b.ManuscriptReview_ID == id);
             var provider = new FileExtensionContentTypeProvider();
-            var file = InfoPath.ModelsPath + info.Manuscript_MainDataPath;
+            var file = InfoPath.ModelsPath + info.ManuscriptReview_MainDataPath;
             var fileName = Path.GetFileName(file);
             var ext = Path.GetExtension(fileName);
             var stream = System.IO.File.OpenRead(file);

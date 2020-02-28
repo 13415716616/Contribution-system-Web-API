@@ -6463,31 +6463,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/qixiaozhi/.nuget/packages/": {}
+    "C:\\Users\\锐旭\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
+      "projectUniqueName": "C:\\Users\\锐旭\\Downloads\\Contribution-system-Web-API-master\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
       "projectName": "Contribution-system-Commond",
-      "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
-      "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
-      "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/",
+      "projectPath": "C:\\Users\\锐旭\\Downloads\\Contribution-system-Web-API-master\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
+      "packagesPath": "C:\\Users\\锐旭\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\锐旭\\Downloads\\Contribution-system-Web-API-master\\Contribution-system-Commond\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
+        "C:\\Users\\锐旭\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
-              "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
+            "C:\\Users\\锐旭\\Downloads\\Contribution-system-Web-API-master\\Contribution-system-Models\\Contribution-system-Models.csproj": {
+              "projectPath": "C:\\Users\\锐旭\\Downloads\\Contribution-system-Web-API-master\\Contribution-system-Models\\Contribution-system-Models.csproj"
             }
           }
         }
@@ -6538,7 +6540,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

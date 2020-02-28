@@ -49,6 +49,7 @@ namespace Contribution_system.Controllers
             manuscript.Author_dec = info.Author_dec;
             manuscript.Complete_Time = DateTime.Now.ToString();
             sqlConnect.CompleteManuscript.Add(manuscript);
+            sqlConnect.ManuscriptReview.Remove(info);
             sqlConnect.SaveChanges();
             return Ok();
         }
