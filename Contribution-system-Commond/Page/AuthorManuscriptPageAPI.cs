@@ -49,24 +49,24 @@ namespace Contribution_system_Commond.Page
             {
                 SqlConnect sqlConnect = new SqlConnect();
                 var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == Manuscript_id);
-                var fpath = InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid;
+                var fpath = InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid;
                 if (!Directory.Exists(fpath))
                 {
                     Directory.CreateDirectory(fpath);
                 }
-                var spath = fpath + "\\" + Manuscript_id;
+                var spath = fpath + "/" + Manuscript_id;
                 if (!Directory.Exists(spath))
                 {
                     Directory.CreateDirectory(spath);
                 }
-                var mpath = spath + "\\主要稿件\\";
+                var mpath = spath + "/主要稿件/";
                 if (!Directory.Exists(mpath))
                 {
                     Directory.CreateDirectory(mpath);
                 }
-                FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid + "\\" + Manuscript_id + "\\主要稿件\\" + file.FileName, FileMode.Create);
+                FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/主要稿件/" + file.FileName, FileMode.Create);
                 file.CopyTo(stream);
-                manuscript.Manuscript_MainDataPath = "wwwroot\\File\\Manuscript\\" + userid + "\\" + Manuscript_id + "\\主要稿件\\" + file.FileName;
+                manuscript.Manuscript_MainDataPath = "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/主要稿件/" + file.FileName;
                 manuscript.Manuscript_Status = ManuscriptMode.UploadFile;
                 manuscript.Editor_Time = DateTime.Now.ToString();
                 sqlConnect.Update(manuscript);
@@ -93,24 +93,24 @@ namespace Contribution_system_Commond.Page
             {
                 SqlConnect sqlConnect = new SqlConnect();
                 var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == Manuscript_id);
-                var fpath = InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid;
+                var fpath = InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid;
                 if (!Directory.Exists(fpath))
                 {
                     Directory.CreateDirectory(fpath);
                 }
-                var spath = fpath + "\\" + Manuscript_id;
+                var spath = fpath + "/" + Manuscript_id;
                 if (!Directory.Exists(spath))
                 {
                     Directory.CreateDirectory(spath);
                 }
-                var mpath = spath + "\\其他资料\\";
+                var mpath = spath + "/其他资料/";
                 if (!Directory.Exists(mpath))
                 {
                     Directory.CreateDirectory(mpath);
                 }
-                FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot\\File\\Manuscript\\" + userid + "\\" + Manuscript_id + "\\其他资料\\" + file.FileName, FileMode.Create);
+                FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/其他资料/" + file.FileName, FileMode.Create);
                 file.CopyTo(stream);
-                manuscript.Manuscript_OtherDataPath = "wwwroot\\File\\Manuscript\\" + userid + "\\" + Manuscript_id + "\\其他资料\\" + file.FileName;
+                manuscript.Manuscript_OtherDataPath = "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/其他资料/" + file.FileName;
                 manuscript.Manuscript_Status = ManuscriptMode.UploadFile;
                 manuscript.Editor_Time = DateTime.Now.ToString();
                 sqlConnect.Update(manuscript);
@@ -154,8 +154,10 @@ namespace Contribution_system_Commond.Page
                 review.Author_Address = info.Author_Address;
                 review.Author_dec = info.Author_dec;
                 review.Author_ID = info.Author_ID;
+                review.ManuscriptReview_Status = "等待编辑审查";
                 review.ManuscriptReview_Time = DateTime.Now.ToString();
                 sqlConnect.ManuscriptReview.Add(review);
+                sqlConnect.Manuscript.Remove(info);
                 sqlConnect.SaveChanges();
                 return true;
             }

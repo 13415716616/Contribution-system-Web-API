@@ -28,7 +28,7 @@ namespace Contribution_system.Controllers
         public IActionResult FindManuscript()
         {
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
-            List<ManuscriptReview> list= sqlConnect.ManuscriptReview.Where(b => b.Editor_ID ==null).ToList();
+            List<ManuscriptReview> list= sqlConnect.ManuscriptReview.Where(b => b.Editor_ID ==null&&b.ManuscriptReview_Status=="等待编辑审查").ToList();
             return Ok(list);
         }
 
@@ -39,12 +39,14 @@ namespace Contribution_system.Controllers
             review = sqlConnect.ManuscriptReview.FirstOrDefault(a => a.ManuscriptReview_ID.Equals(id));
             return Ok(review);
         }
-       
+
+        [Authorize]
         [HttpPost("SentComment")]
         public IActionResult SentComment([FromBody] CommentInfo commentinfo)
         {
             commentinfo.role = User.FindFirst(ClaimTypes.Role)?.Value;
             commentinfo.time = DateTime.Now.ToString();
+            var id= User.FindFirst(ClaimTypes.Name)?.Value; 
             var info = sqlConnect.ManuscriptReview.FirstOrDefault(b => b.ManuscriptReview_ID == commentinfo.manscriptid);
             if (info.ManuscriptReview_First_Info == null|| info.ManuscriptReview_First_Info == "")
             {
@@ -64,7 +66,10 @@ namespace Contribution_system.Controllers
                 info.ManuscriptReview_First_Info = s;
                 bool test = commentinfo.role.Equals("ChiefEditor");
                 if (commentinfo.role.Equals("ChiefEditor"))
+                {
                     info.ManuscriptReview_Status = "主编审查中";
+                    info.ChiefEditor_ID = id;
+                }
                 sqlConnect.Update(info);
                 sqlConnect.SaveChanges();
                 return Ok();
@@ -101,7 +106,7 @@ namespace Contribution_system.Controllers
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;
             List<ManuscriptReview> manuscripts = new List<ManuscriptReview>();
-            manuscripts = sqlConnect.ManuscriptReview.Where(b => b.Editor_ID == id).ToList();
+            manuscripts = sqlConnect.ManuscriptReview.Where(b => b.Editor_ID == id&&b.ManuscriptReview_Status=="等待编辑审查").ToList();
             return Ok(manuscripts);
         }
     }

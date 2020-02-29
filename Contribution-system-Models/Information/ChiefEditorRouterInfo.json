@@ -49,7 +49,7 @@
     "parentId": 3,
     "id": 31,
     "meta": {
-      "title": "审查稿件",
+      "title": "选择审查稿件",
       "show": true
     },
     "component": "SelectManuscript"

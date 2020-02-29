@@ -136,5 +136,31 @@ namespace Contribution_system.Controllers
             var info = sqlConnect.CompleteManuscript.ToList();
             return Ok(info);
         }
+
+        [HttpGet("CompleteDratfs")]
+        public IActionResult CompleteDratfs(int id){
+            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
+            ManuscriptReview review = new ManuscriptReview();
+            review.ManuscriptReview_Title = info.Manuscript_Title;
+            review.ManuscriptReview_Etitle = info.Manuscript_Etitle;
+            review.ManuscriptReview_Keyword = info.Manuscript_Keyword;
+            review.ManuscriptReview_Reference = info.Manuscript_Reference;
+            review.ManuscriptReview_Abstract = info.Manuscript_Abstract;
+            review.ManuscriptReview_Text = info.Manuscript_Text;
+            review.ManuscriptReview_MainDataPath = info.Manuscript_MainDataPath;
+            review.ManuscriptReview_OtherDataPath = info.Manuscript_OtherDataPath;
+            review.Author_name = info.Author_name;
+            review.Author_Phone = info.Author_Phone;
+            review.Author_sex = info.Author_sex;
+            review.Author_Address = info.Author_Address;
+            review.Author_dec = info.Author_dec;
+            review.Author_ID = info.Author_ID;
+            review.ManuscriptReview_Status = "等待编辑审查";
+            review.ManuscriptReview_Time = DateTime.Now.ToString();
+            sqlConnect.ManuscriptReview.Add(review);
+            sqlConnect.Manuscript.Remove(info);
+            sqlConnect.SaveChanges();
+            return Ok();
+        }
     }
 }

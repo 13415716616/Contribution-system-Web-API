@@ -1,26 +1,26 @@
 ﻿<Properties StartupConfiguration="{1710977E-B7B1-4C2C-B319-44AC0C78A475}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Contribution-system/Controllers/ChiefEditorController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Contribution-system-Commond/Page/AuthorManuscriptPageAPI.cs">
     <Files>
-      <File FileName="Contribution-system/Controllers/ChiefEditorController.cs" Line="61" Column="29" />
-      <File FileName="Contribution-system-Models/Models/ManuscriptReview.cs" Line="27" Column="37" />
+      <File FileName="Contribution-system-Commond/Page/AuthorManuscriptPageAPI.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Contribution-system" expanded="True" selected="True">
+          <Node name="Contribution-system" expanded="True">
             <Node name="Contribution-system" expanded="True">
               <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="Contribution-system-Commond" expanded="True">
+              <Node name="Page" expanded="True">
+                <Node name="AuthorManuscriptPageAPI.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Contribution-system-Models" expanded="True">
               <Node name="Information" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="WebModel" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

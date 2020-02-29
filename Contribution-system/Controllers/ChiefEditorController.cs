@@ -24,7 +24,7 @@ namespace Contribution_system.Controllers
         [HttpGet("GetSecondManuscript")]
         public IActionResult GetSecondManuscript()
         {
-            List<ManuscriptReview> manuscripts = sqlConnect.ManuscriptReview.Where(b => b.ManuscriptReview_Second_Info == ""&&b.ManuscriptReview_Status=="等待主编审查").ToList();
+            List<ManuscriptReview> manuscripts = sqlConnect.ManuscriptReview.Where(b => b.ManuscriptReview_Second_Info == null&&b.ManuscriptReview_Status=="等待主编审查").ToList();
             return Ok(manuscripts);
         }
 
