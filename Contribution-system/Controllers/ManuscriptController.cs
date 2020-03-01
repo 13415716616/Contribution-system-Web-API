@@ -31,9 +31,10 @@ namespace Contribution_system.Controllers
         public IActionResult AddManuscript(Manuscript manuscript)
         {
             string author_id=manuscript.Author_ID = User.FindFirst(ClaimTypes.Name)?.Value;
-            if (AuthorManuscriptPageAPI.AddNewManuscript(manuscript, author_id))
+            var id = AuthorManuscriptPageAPI.AddNewManuscript(manuscript, author_id);
+            if (id!=0)
             {
-                return Ok();
+                return Ok(id);
             }
             else
                 return BadRequest();

@@ -19,7 +19,7 @@ namespace Contribution_system_Commond.Page
         /// <param name="manuscript"></param>
         /// <param name="author_id">作者ID</param>
         /// <returns></returns>
-        public static bool AddNewManuscript(Manuscript manuscript,string author_id)
+        public static int AddNewManuscript(Manuscript manuscript,string author_id)
         {
             SqlConnect sqlConnect = new SqlConnect();
             try {
@@ -28,11 +28,11 @@ namespace Contribution_system_Commond.Page
                 manuscript.Editor_Time = DateTime.Now.ToString();
                 sqlConnect.Manuscript.Add(manuscript);
                 sqlConnect.SaveChanges();
-                return true;
+                return manuscript.Manuscript_ID;
             }catch(Exception e)
             {
                 Console.WriteLine(e);
-                return false;
+                return 0;
     }
 }
 
@@ -157,7 +157,7 @@ namespace Contribution_system_Commond.Page
                 review.ManuscriptReview_Status = "等待编辑审查";
                 review.ManuscriptReview_Time = DateTime.Now.ToString();
                 sqlConnect.ManuscriptReview.Add(review);
-                sqlConnect.Manuscript.Remove(info);
+                // sqlConnect.Manuscript.Remove(info);
                 sqlConnect.SaveChanges();
                 return true;
             }

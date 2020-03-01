@@ -14,13 +14,6 @@ E:/project/毕业设计/Contribution-system-Web-API/Contribution-system-Models/o
 E:/project/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.AssemblyInfo.cs
 E:/project/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.dll
 E:/project/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.pdb
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.deps.json
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.dll
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.pdb
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.AssemblyInfoInputs.cache
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.AssemblyInfo.cs
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.dll
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.pdb
 C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.deps.json
 C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.dll
 C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.pdb
@@ -29,4 +22,10 @@ C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system
 C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.AssemblyInfo.cs
 C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.dll
 C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.pdb
-/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.csprojAssemblyReference.cache
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.deps.json
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.dll
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/bin/Debug/netstandard2.0/Contribution-system-Models.pdb
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.AssemblyInfoInputs.cache
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.AssemblyInfo.cs
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.dll
+/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.pdb

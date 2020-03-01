@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using Contribution_system_Models;
 using Contribution_system_Models.Models;
 using Contribution_system_Models.WebModel;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -70,6 +68,11 @@ namespace Contribution_system.Controllers
                     info.ManuscriptReview_Status = "主编审查中";
                     info.ChiefEditor_ID = id;
                 }
+                if(commentinfo.role.Equals("Editor"))
+                {
+                    info.ManuscriptReview_Status = "编辑审查中";
+                    info.Editor_ID = id;
+                }
                 sqlConnect.Update(info);
                 sqlConnect.SaveChanges();
                 return Ok();
@@ -106,7 +109,7 @@ namespace Contribution_system.Controllers
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;
             List<ManuscriptReview> manuscripts = new List<ManuscriptReview>();
-            manuscripts = sqlConnect.ManuscriptReview.Where(b => b.Editor_ID == id&&b.ManuscriptReview_Status=="等待编辑审查").ToList();
+            manuscripts = sqlConnect.ManuscriptReview.Where(b => b.Editor_ID == id&&b.ManuscriptReview_Status=="编辑审查中").ToList();
             return Ok(manuscripts);
         }
     }
