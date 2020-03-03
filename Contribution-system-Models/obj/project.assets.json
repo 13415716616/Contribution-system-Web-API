@@ -6220,11 +6220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
+      "projectUniqueName": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
       "projectName": "Contribution-system-Models",
-      "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
+      "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
       "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
-      "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/",
+      "outputPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
@@ -6282,7 +6282,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/qixiaozhi/.dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
       }
     }
   }

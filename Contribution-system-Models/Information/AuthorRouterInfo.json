@@ -22,17 +22,6 @@
     "component": "Workplace"
   },
   {
-    "name": "Analysis",
-    "parentId": 1,
-    "id": 2,
-    "meta": {
-      "title": "分析页",
-      "show": true
-    },
-    "component": "Analysis",
-    "path": "/dashboard/analysis"
-  },
-  {
     "name": "Manuscript",
     "parentId": 0,
     "id": 10,
@@ -152,7 +141,7 @@
       "hideChildren": true,
       "show": true
     },
-    "redirect": "/account/settings/BaseSettings",
+    "redirect": "/account/settings/custom",
     "component": "AccountSettings"
   },
   {
@@ -167,17 +156,6 @@
     "component": "BaseSettings"
   },
   {
-    "name": "SecuritySettings",
-    "path": "/account/settings/security",
-    "parentId": 10030,
-    "id": 10032,
-    "meta": {
-      "title": "安全设置",
-      "show": true
-    },
-    "component": "SecuritySettings"
-  },
-  {
     "name": "CustomSettings",
     "path": "/account/settings/custom",
     "parentId": 10030,
@@ -187,17 +165,6 @@
       "show": true
     },
     "component": "CustomSettings"
-  },
-  {
-    "name": "BindingSettings",
-    "path": "/account/settings/binding",
-    "parentId": 10030,
-    "id": 10034,
-    "meta": {
-      "title": "账户绑定",
-      "show": false
-    },
-    "component": "BindingSettings"
   },
   {
     "name": "NotificationSettings",

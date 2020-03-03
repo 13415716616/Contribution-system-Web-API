@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj": {}
+    "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj": {}
   },
   "projects": {
-    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj": {
+    "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
+        "projectUniqueName": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
         "projectName": "Contribution-system-Commond",
-        "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
+        "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj",
         "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
-        "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/",
+        "outputPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
-                "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
+              "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
+                "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
               }
             }
           }
@@ -77,18 +77,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/qixiaozhi/.dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
+    "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
+        "projectUniqueName": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
         "projectName": "Contribution-system-Models",
-        "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
+        "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj",
         "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
-        "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/",
+        "outputPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
@@ -146,18 +146,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/qixiaozhi/.dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj": {
+    "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj",
+        "projectUniqueName": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj",
         "projectName": "Contribution-system",
-        "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj",
+        "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/Contribution-system.csproj",
         "packagesPath": "/Users/qixiaozhi/.nuget/packages/",
-        "outputPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system/obj/",
+        "outputPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/qixiaozhi/.config/NuGet/NuGet.Config"
@@ -171,11 +171,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj": {
-                "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj"
+              "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj": {
+                "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/Contribution-system-Commond.csproj"
               },
-              "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
-                "projectPath": "/Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
+              "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj": {
+                "projectPath": "/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/Contribution-system-Models.csproj"
               }
             }
           }
@@ -228,7 +228,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/qixiaozhi/.dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     }

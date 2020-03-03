@@ -39,3 +39,14 @@ C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system
 /Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.csproj.CopyComplete
 /Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.dll
 /Volumes/Data/Mydata/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.pdb
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/bin/Debug/netstandard2.0/Contribution-system-Commond.deps.json
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/bin/Debug/netstandard2.0/Contribution-system-Commond.dll
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/bin/Debug/netstandard2.0/Contribution-system-Commond.pdb
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/bin/Debug/netstandard2.0/Contribution-system-Models.dll
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/bin/Debug/netstandard2.0/Contribution-system-Models.pdb
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.csprojAssemblyReference.cache
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.AssemblyInfoInputs.cache
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.AssemblyInfo.cs
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.csproj.CopyComplete
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.dll
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Commond/obj/Debug/netstandard2.0/Contribution-system-Commond.pdb

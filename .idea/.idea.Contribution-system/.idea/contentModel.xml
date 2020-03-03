@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Contribution-system.962911791.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Contribution-system" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contribution-system.csproj" t="IncludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ChiefEditorController.cs" t="Include" />
+          <e p="EditorManscriptController.cs" t="Include" />
+          <e p="ManuscriptController.cs" t="Include" />
+          <e p="ManuscriptReviewController.cs" t="Include" />
+          <e p="PersonalController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+          <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Contribution-system.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+      </e>
+      <e p="Contribution-system-Commond" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contribution-system-Commond.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contribution-system-Commond.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Page" t="Include">
+          <e p="AuthorManuscriptPageAPI.cs" t="Include" />
+          <e p="PersonalPageAPI.cs" t="Include" />
+          <e p="UserPageAPI.cs" t="Include" />
+        </e>
+        <e p="UserCommond.cs" t="Include" />
+      </e>
+      <e p="Contribution-system-Models" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contribution-system-Models.csproj" t="IncludeRecursive" />
+        <e p="Information" t="Include">
+          <e p="AuthorRole.json" t="Include" />
+          <e p="AuthorRouterInfo.json" t="Include" />
+          <e p="ChiefEditorRouterInfo.json" t="Include" />
+          <e p="EditorRouterinfo.json" t="Include" />
+          <e p="Role.json" t="Include" />
+          <e p="RouterInfo.json" t="Include" />
+        </e>
+        <e p="jwtSetting.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Author.cs" t="Include" />
+          <e p="ChiefEditor.cs" t="Include" />
+          <e p="CompleteManuscript.cs" t="Include" />
+          <e p="Editor.cs" t="Include" />
+          <e p="Manuscript.cs" t="Include" />
+          <e p="ManuscriptAuthor.cs" t="Include" />
+          <e p="ManuscriptContent.cs" t="Include" />
+          <e p="ManuscriptReview.cs" t="Include" />
+          <e p="ManuscriptSubmitted.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contribution-system-Models.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SqlConnect.cs" t="Include" />
+        <e p="WebModel" t="Include">
+          <e p="AuthorPersonalPage.cs" t="Include" />
+          <e p="EditorManscript.cs" t="Include" />
+          <e p="ManuscriptModel.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="File" t="Include">
+            <e p="Manuscript" t="Include">
+              <e p="aaa123" t="Include">
+                <e p="0" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="1" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                  <e p="其他资料" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="12" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="123" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="26" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="27" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="28" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="在线考试系统毕业论文.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="29" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="中国计算机图形学研究进展.pdf" t="Include" />
+                  </e>
+                </e>
+                <e p="30" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="毕设进度.docx" t="Include" />
+                  </e>
+                </e>
+                <e p="31" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="毕设进度.docx" t="Include" />
+                  </e>
+                </e>
+                <e p="32" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="be87f3f92ab8a8e498e0d2c09f38b9d9.jpg" t="Include" />
+                    <e p="中国计算机图形学研究进展.pdf" t="Include" />
+                  </e>
+                </e>
+                <e p="33" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="34" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="龙江镇异地务工人员（湖北、温州地区）排查信息台账表(1)(1)(1).xlsx" t="Include" />
+                  </e>
+                </e>
+                <e p="52" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="龙江镇异地务工人员信息统计表(1).xls" t="Include" />
+                  </e>
+                </e>
+                <e p="53" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="龙江镇异地务工人员（湖北、温州地区）排查信息台账表(1)(1)(1).xls" t="Include" />
+                  </e>
+                </e>
+                <e p="54" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="龙江镇异地务工人员（湖北、温州地区）排查信息台账表(1)(1)(1).xlsx" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="author" t="Include">
+                <e p="55" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="56" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="57" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="58" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="59" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+                <e p="60" t="Include">
+                  <e p="主要稿件" t="Include">
+                    <e p="数据库设计文档模板.doc" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Contribution-system.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
