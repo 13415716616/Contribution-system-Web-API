@@ -564,7 +564,6 @@ C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/appsettings.json
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
-/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Contribution-system
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Contribution-system.deps.json
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Contribution-system.runtimeconfig.json
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Contribution-system.runtimeconfig.dev.json
@@ -695,13 +694,13 @@ C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Contribution-system-Commond.pdb
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/bin/Debug/netcoreapp3.1/Contribution-system-Models.pdb
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.csprojAssemblyReference.cache
-/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/staticwebassets/Contribution-system.StaticWebAssets.Manifest.cache
-/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/staticwebassets/Contribution-system.StaticWebAssets.xml
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.MvcApplicationPartsAssemblyInfo.cs
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.MvcApplicationPartsAssemblyInfo.cache
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.AssemblyInfoInputs.cache
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.AssemblyInfo.cs
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.RazorTargetAssemblyInfo.cache
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.csproj.CopyComplete
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/staticwebassets/Contribution-system.StaticWebAssets.Manifest.cache
+/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/staticwebassets/Contribution-system.StaticWebAssets.xml
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.dll
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/obj/Debug/netcoreapp3.1/Contribution-system.pdb

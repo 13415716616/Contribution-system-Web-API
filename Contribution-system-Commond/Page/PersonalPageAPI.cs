@@ -4,8 +4,10 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using Contribution_system_Models.WebModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contribution_system_Commond.Page
 {
@@ -64,10 +66,10 @@ namespace Contribution_system_Commond.Page
         {
             SqlConnect sqlConnect=new SqlConnect();
             AuthorManuscriptNum num=new AuthorManuscriptNum();
-            num.DarftManuscript = sqlConnect.Manuscript.Count(b => b.Author_ID == id);
+            num.DarftManuscript = sqlConnect.DraftManuscript.Count(b => b.Author_ID == id);
             num.ReviewsManusript = sqlConnect.ManuscriptReview.Count(b => b.Author_ID == id);
             num.CompleteManuscript = sqlConnect.CompleteManuscript.Count(b => b.Author_ID == id);
             return num;
-        }
+        }        
     }
 }

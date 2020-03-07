@@ -1,24 +1,16 @@
 ﻿<Properties StartupConfiguration="{1710977E-B7B1-4C2C-B319-44AC0C78A475}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Contribution-system/Controllers/AuthorManuscriptController.cs">
+    <Files>
+      <File FileName="Contribution-system/Controllers/AuthorManuscriptController.cs" Line="101" Column="25" />
+      <File FileName="Contribution-system/Program.cs" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Contribution-system" expanded="True">
             <Node name="Contribution-system" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="EditorManscriptController.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Contribution-system-Commond" expanded="True">
-              <Node name="Page" expanded="True" />
-            </Node>
-            <Node name="Contribution-system-Models" expanded="True">
-              <Node name="Information" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="File" expanded="True">
-                  <Node name="Manuscript" expanded="True" />
-                </Node>
+                <Node name="AuthorManuscriptController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -30,7 +22,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system/Controllers/AuthorManuscriptController.cs" relfile="Contribution-system/Controllers/AuthorManuscriptController.cs" line="185" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

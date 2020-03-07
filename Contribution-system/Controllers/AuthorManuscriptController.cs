@@ -16,11 +16,11 @@ namespace Contribution_system.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ManuscriptController : ControllerBase
+    public class AuthorManuscriptController : ControllerBase
     {
         SqlConnect sqlConnect;
 
-        public ManuscriptController(SqlConnect sqlConnect)
+        public AuthorManuscriptController(SqlConnect sqlConnect)
         {
             this.sqlConnect = sqlConnect;
         }
@@ -28,11 +28,11 @@ namespace Contribution_system.Controllers
         //添加新的稿件信息
         [HttpPost]
         [Authorize]
-        public IActionResult AddManuscript(Manuscript manuscript)
+        public IActionResult AddManuscript(DraftManuscript manuscript)
         {
-            string author_id=manuscript.Author_ID = User.FindFirst(ClaimTypes.Name)?.Value;
+            string author_id = manuscript.Author_ID = User.FindFirst(ClaimTypes.Name)?.Value;
             var id = AuthorManuscriptPageAPI.AddNewManuscript(manuscript, author_id);
-            if (id!=0)
+            if (id != 0)
             {
                 return Ok(id);
             }
@@ -58,7 +58,7 @@ namespace Contribution_system.Controllers
         public IActionResult UploadDataOther([FromForm] IFormFile file)
         {
             var a = int.Parse(Request.Headers["ManuscriptID"]);
-            var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == a);
+            var manuscript = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID == a);
             var userid = User.FindFirst(ClaimTypes.Name)?.Value;
             if (AuthorManuscriptPageAPI.AddOtherManuscriptUpload(file, a, userid))
                 return Ok();
@@ -83,17 +83,24 @@ namespace Contribution_system.Controllers
         [HttpGet]
         public IActionResult GetManscriptInfo(int id)
         {
-            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID.Equals(id));
+            var info = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID.Equals(id));
             return Ok(info);
         }
 
+        //更改草稿箱中的稿件信息
         [HttpGet("ManuscriptToDrafts")]
         [Authorize]
         public IActionResult ManuscriptToDrafts()
         {
-            var userid = User.FindFirst(ClaimTypes.Name)?.Value;
-            List<Manuscript> manuscripts = sqlConnect.Manuscript.Where(b=>b.Author_ID.Equals(userid)).ToList();
-            return Ok(manuscripts);
+            try { 
+                var userid = User.FindFirst(ClaimTypes.Name)?.Value;
+                var manuscripts = sqlConnect.DraftManuscript.Where(b => b.Author_ID.Equals(userid)).ToList();
+                return Ok(manuscripts);
+            }catch(Exception e)
+            {
+                Console.Write(e);
+                return BadRequest();
+            }
         }
 
         /// <summary>
@@ -107,11 +114,12 @@ namespace Contribution_system.Controllers
         {
             try
             {
-                var a=sqlConnect.Manuscript.First(sss => sss.Manuscript_ID.Equals(id));
-                sqlConnect.Manuscript.Remove(a);
+                var a = sqlConnect.DraftManuscript.First(sss => sss.DraftManuscript_ID.Equals(id));
+                sqlConnect.DraftManuscript.Remove(a);
                 sqlConnect.SaveChanges();
                 return Ok();
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e);
                 return BadRequest();
@@ -139,17 +147,18 @@ namespace Contribution_system.Controllers
         }
 
         [HttpGet("CompleteDratfs")]
-        public IActionResult CompleteDratfs(int id){
-            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
+        public IActionResult CompleteDratfs(int id)
+        {
+            var info = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID == id);
             ManuscriptReview review = new ManuscriptReview();
-            review.ManuscriptReview_Title = info.Manuscript_Title;
-            review.ManuscriptReview_Etitle = info.Manuscript_Etitle;
-            review.ManuscriptReview_Keyword = info.Manuscript_Keyword;
-            review.ManuscriptReview_Reference = info.Manuscript_Reference;
-            review.ManuscriptReview_Abstract = info.Manuscript_Abstract;
-            review.ManuscriptReview_Text = info.Manuscript_Text;
-            review.ManuscriptReview_MainDataPath = info.Manuscript_MainDataPath;
-            review.ManuscriptReview_OtherDataPath = info.Manuscript_OtherDataPath;
+            review.ManuscriptReview_Title = info.DraftManuscript_Title;
+            review.ManuscriptReview_Etitle = info.DraftManuscript_Etitle;
+            review.ManuscriptReview_Keyword = info.DraftManuscript_Keyword;
+            review.ManuscriptReview_Reference = info.DraftManuscript_Reference;
+            review.ManuscriptReview_Abstract = info.DraftManuscript_Abstract;
+            review.ManuscriptReview_Text = info.DraftManuscript_Text;
+            review.ManuscriptReview_MainDataPath = info.DraftManuscript_MainDataPath;
+            review.ManuscriptReview_OtherDataPath = info.DraftManuscript_OtherDataPath;
             review.Author_name = info.Author_name;
             review.Author_Phone = info.Author_Phone;
             review.Author_sex = info.Author_sex;
@@ -159,9 +168,37 @@ namespace Contribution_system.Controllers
             review.ManuscriptReview_Status = "等待编辑审查";
             review.ManuscriptReview_Time = DateTime.Now.ToString();
             sqlConnect.ManuscriptReview.Add(review);
-            sqlConnect.Manuscript.Remove(info);
+            sqlConnect.DraftManuscript.Remove(info);
             sqlConnect.SaveChanges();
             return Ok();
+        }
+
+        //更新草稿箱中的稿件信息
+        [HttpPost("UpdateMansuscriptDrafts")]
+        public IActionResult UpdateMansuscriptDrafts([FromBody] DraftManuscript draft)
+        {
+            try
+            { 
+                var info = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID == draft.DraftManuscript_ID);
+                info.DraftManuscript_Title = draft.DraftManuscript_Title;
+                info.DraftManuscript_Etitle = draft.DraftManuscript_Etitle;
+                info.DraftManuscript_Keyword = draft.DraftManuscript_Keyword;
+                info.DraftManuscript_Abstract = draft.DraftManuscript_Abstract;
+                info.DraftManuscript_Reference = draft.DraftManuscript_Reference;
+                info.DraftManuscript_Text = draft.DraftManuscript_Text;
+                info.Author_name = draft.Author_name;
+                info.Author_sex = draft.Author_sex;
+                info.Author_Phone = draft.Author_Phone;
+                info.Author_Address = draft.Author_Address;
+                info.Author_dec = draft.Author_dec;
+                sqlConnect.Update(info);
+                sqlConnect.SaveChanges();
+                return Ok();
+            }catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return BadRequest(e);
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Contribution_system_Models
 
         public DbSet<Author> Authors { get; set; }
 
-        public DbSet<Manuscript> Manuscript { get; set; }
+        public DbSet<DraftManuscript> DraftManuscript { get; set; }
 
         public DbSet<Editor> Editors { get; set; }
 

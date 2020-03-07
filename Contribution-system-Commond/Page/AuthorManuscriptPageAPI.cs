@@ -19,16 +19,16 @@ namespace Contribution_system_Commond.Page
         /// <param name="manuscript"></param>
         /// <param name="author_id">作者ID</param>
         /// <returns></returns>
-        public static int AddNewManuscript(Manuscript manuscript,string author_id)
+        public static int AddNewManuscript(DraftManuscript manuscript,string author_id)
         {
             SqlConnect sqlConnect = new SqlConnect();
             try {
-                manuscript.Manuscript_Status = ManuscriptMode.WriteInfo;
+                manuscript.DraftManuscript_Status = ManuscriptMode.WriteInfo;
                 manuscript.Author_ID = author_id;
-                manuscript.Editor_Time = DateTime.Now.ToString();
-                sqlConnect.Manuscript.Add(manuscript);
+                manuscript.Edit_Time = DateTime.Now.ToString();
+                sqlConnect.DraftManuscript.Add(manuscript);
                 sqlConnect.SaveChanges();
-                return manuscript.Manuscript_ID;
+                return manuscript.DraftManuscript_ID;
             }catch(Exception e)
             {
                 Console.WriteLine(e);
@@ -48,7 +48,7 @@ namespace Contribution_system_Commond.Page
             try
             {
                 SqlConnect sqlConnect = new SqlConnect();
-                var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == Manuscript_id);
+                var manuscript = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID == Manuscript_id);
                 var fpath = InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid;
                 if (!Directory.Exists(fpath))
                 {
@@ -66,9 +66,9 @@ namespace Contribution_system_Commond.Page
                 }
                 FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/主要稿件/" + file.FileName, FileMode.Create);
                 file.CopyTo(stream);
-                manuscript.Manuscript_MainDataPath = "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/主要稿件/" + file.FileName;
-                manuscript.Manuscript_Status = ManuscriptMode.UploadFile;
-                manuscript.Editor_Time = DateTime.Now.ToString();
+                manuscript.DraftManuscript_MainDataPath = "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/主要稿件/" + file.FileName;
+                manuscript.DraftManuscript_Status = ManuscriptMode.UploadFile;
+                manuscript.Edit_Time = DateTime.Now.ToString();
                 sqlConnect.Update(manuscript);
                 sqlConnect.SaveChanges();
                 return true;
@@ -92,7 +92,7 @@ namespace Contribution_system_Commond.Page
             try
             {
                 SqlConnect sqlConnect = new SqlConnect();
-                var manuscript = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == Manuscript_id);
+                var manuscript = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID == Manuscript_id);
                 var fpath = InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid;
                 if (!Directory.Exists(fpath))
                 {
@@ -110,9 +110,9 @@ namespace Contribution_system_Commond.Page
                 }
                 FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/其他资料/" + file.FileName, FileMode.Create);
                 file.CopyTo(stream);
-                manuscript.Manuscript_OtherDataPath = "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/其他资料/" + file.FileName;
-                manuscript.Manuscript_Status = ManuscriptMode.UploadFile;
-                manuscript.Editor_Time = DateTime.Now.ToString();
+                manuscript.DraftManuscript_OtherDataPath = "wwwroot/File/Manuscript/" + userid + "/" + Manuscript_id + "/其他资料/" + file.FileName;
+                manuscript.DraftManuscript_Status = ManuscriptMode.UploadFile;
+                manuscript.Edit_Time = DateTime.Now.ToString();
                 sqlConnect.Update(manuscript);
                 sqlConnect.SaveChanges();
                 return true ;
@@ -129,25 +129,25 @@ namespace Contribution_system_Commond.Page
             try
             {
                 SqlConnect sqlConnect = new SqlConnect();
-                var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID.Equals(author.Manscript_ID));
+                var info = sqlConnect.DraftManuscript.FirstOrDefault(b => b.DraftManuscript_ID.Equals(author.Manscript_ID));
                 info.Author_name = author.Author_name;
                 info.Author_sex = author.Author_sex;
                 info.Author_Phone = author.Author_Phone;
                 info.Author_Address = author.Author_Address;
                 info.Author_dec = author.Author_dec;
-                info.Manuscript_Status = ManuscriptMode.Complete;
-                info.Editor_Time = DateTime.Now.ToString();
+                info.DraftManuscript_Status = ManuscriptMode.Complete;
+                info.Edit_Time = DateTime.Now.ToString();
                 sqlConnect.Update(info);
                 sqlConnect.SaveChanges();
                 ManuscriptReview review = new ManuscriptReview();
-                review.ManuscriptReview_Title = info.Manuscript_Title;
-                review.ManuscriptReview_Etitle = info.Manuscript_Etitle;
-                review.ManuscriptReview_Keyword = info.Manuscript_Keyword;
-                review.ManuscriptReview_Reference = info.Manuscript_Reference;
-                review.ManuscriptReview_Abstract = info.Manuscript_Abstract;
-                review.ManuscriptReview_Text = info.Manuscript_Text;
-                review.ManuscriptReview_MainDataPath = info.Manuscript_MainDataPath;
-                review.ManuscriptReview_OtherDataPath = info.Manuscript_OtherDataPath;
+                review.ManuscriptReview_Title = info.DraftManuscript_Title;
+                review.ManuscriptReview_Etitle = info.DraftManuscript_Etitle;
+                review.ManuscriptReview_Keyword = info.DraftManuscript_Keyword;
+                review.ManuscriptReview_Reference = info.DraftManuscript_Reference;
+                review.ManuscriptReview_Abstract = info.DraftManuscript_Abstract;
+                review.ManuscriptReview_Text = info.DraftManuscript_Text;
+                review.ManuscriptReview_MainDataPath = info.DraftManuscript_MainDataPath;
+                review.ManuscriptReview_OtherDataPath = info.DraftManuscript_OtherDataPath;
                 review.Author_name = info.Author_name;
                 review.Author_Phone = info.Author_Phone;
                 review.Author_sex = info.Author_sex;

@@ -5,7 +5,7 @@
     "id": 1,
     "meta": {
       "icon": "dashboard",
-      "title": "仪表盘",
+      "title": "首页",
       "show": true
     },
     "component": "RouteView",
@@ -16,7 +16,7 @@
     "parentId": 1,
     "id": 7,
     "meta": {
-      "title": "工作台",
+      "title": "个人首页",
       "show": true
     },
     "component": "Workplace"
@@ -27,7 +27,7 @@
     "id": 10,
     "meta": {
       "icon": "form",
-      "title": "稿件管理"
+      "title": "投稿管理"
     },
     "redirect": "/Manuscript/ContributePage",
     "component": "PageView"
@@ -38,7 +38,7 @@
     "parentId": 10,
     "id": 101,
     "meta": {
-      "title": "在线投稿",
+      "title": "我要投稿",
       "show": true
     },
     "component": "ContributePage"
@@ -53,6 +53,17 @@
       "show": true
     },
     "component": "ManuscriptDrafts"
+  },
+  {
+
+    "name": "ModifyDraftManuscript",
+    "parentId": 10,
+    "id": 1011,
+    "meta": {
+      "title": "修改草稿箱稿件",
+      "show": true
+    },
+    "component": "ModifyDraftManuscript"
   },
   {
 
@@ -108,7 +119,7 @@
       "show": false
     },
     "component": "ShowAuthorCompleteManuscript"
-  },  
+  },
   {
     "name": "account",
     "parentId": 0,
