@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using Contribution_system_Models;
@@ -22,20 +23,49 @@ namespace Contribution_system.Controllers
             this.sqlConnect = _sqlConnect;
         }
 
+        // 需要编辑初审的稿件信息
         [HttpGet]
         public IActionResult FindManuscript()
         {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
-            List<ManuscriptReview> list= sqlConnect.ManuscriptReview.Where(b => b.Editor_ID ==null&&b.ManuscriptReview_Status=="等待编辑审查").ToList();
-            return Ok(list);
+            List<Manuscript> list= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑初审")).ToList();
+            var info = new List<ManuscriptTable>();
+            ManuscriptTable t = new ManuscriptTable();
+            foreach (var i in list)
+            {
+                t.Manuscript_ID = i.Manuscript_ID;
+                t.Manuscript_Title = i.Manuscript_Title;
+                t.Author_ID = i.Author_ID;
+                t.Manuscript_Status = i.Manuscript_Status;
+                t.ManuscriptColumn = sqlConnect.ManuscriptColumn.FirstOrDefault(b => b.ManuscriptColumn_ID == i.ManuscriptColumn_ID).ManuscriptColumn_Name;
+                t.Time = i.Time;
+                info.Add(t);
+            }
+            sw.Stop();
+            TimeSpan ts2 = sw.Elapsed;
+            Console.WriteLine("Stopwatch总共花费{0}ms.", ts2.TotalMilliseconds);
+            return Ok(info);
         }
+      
 
-        [HttpGet("Show")]
-        public IActionResult GetAllManuscript(int id)
+        [HttpPost("CompleteFirstContribution")]
+        [Authorize]
+        public IActionResult CompleteFirstContribution([FromBody] FirstReview manuscript)
         {
-            ManuscriptReview review = new ManuscriptReview();
-            review = sqlConnect.ManuscriptReview.FirstOrDefault(a => a.ManuscriptReview_ID.Equals(id));
-            return Ok(review);
+            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == manuscript.Manuscript_ID);
+            info.Manuscript_Status = "等待专家审查";
+            EditorReview review = new EditorReview();
+            review.Editor_ID= User.FindFirst(ClaimTypes.Name)?.Value;
+            review.Editor_Type = "初审编辑";
+            review.Editor_Opinion = manuscript.ContentText;
+            review.Manuscript_ID = manuscript.Manuscript_ID;
+            review.Review_Time = DateTime.Now.ToString();
+            sqlConnect.Update(info);
+            sqlConnect.EditorReview.Add(review);
+            sqlConnect.SaveChanges();
+            return Ok();
         }
 
         [Authorize]
@@ -87,14 +117,13 @@ namespace Contribution_system.Controllers
             return Ok(jsoninfo);
         }
 
-        [HttpGet("Complete")]
-        public IActionResult CompleteFirstExamination(int id)
+        [HttpGet("GetEndManuscript")]
+        [Authorize]
+        public IActionResult GetEndManuscript()
         {
-            var info = sqlConnect.ManuscriptReview.FirstOrDefault(b => b.ManuscriptReview_ID == id);
-            info.ManuscriptReview_Status = "等待主编审查";
-            sqlConnect.Update(info);
-            sqlConnect.SaveChanges();
-            return Ok();
+            var id= User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.Manuscript.Where(b => b.Editor_ID == id).ToList();
+            return Ok(info);
         }
 
         [HttpGet("GetManuscript")]
@@ -104,13 +133,54 @@ namespace Contribution_system.Controllers
             return Ok();
         }
 
+        // 获取所有初审稿件
         [HttpGet("GetEdiotrManuscript")]
         public IActionResult GetEdiotrManuscript()
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;
             List<ManuscriptReview> manuscripts = new List<ManuscriptReview>();
-            manuscripts = sqlConnect.ManuscriptReview.Where(b => b.Editor_ID == id&&b.ManuscriptReview_Status=="编辑审查中").ToList();
+            manuscripts = sqlConnect.ManuscriptReview.Where(b => b.Editor_ID == id&&b.ManuscriptReview_Status=="编辑审查中").ToList(); 
             return Ok(manuscripts);
+        }
+
+        // 获取所有复审稿件
+        [HttpGet("GetSecondEdiotrManuscript")]
+        public IActionResult GetSecondEdiotrManuscript()
+        {
+            var id= User.FindFirst(ClaimTypes.Name)?.Value;          
+            var manuscripts = sqlConnect.Manuscript.Where(b =>b.Manuscript_Status =="等待主编复审").ToList();
+            return Ok(manuscripts);
+        }
+
+        [HttpGet("CompleteSecondEdiotrManuscript")]
+        public IActionResult CompleteSecondEdiotrManuscript(int id)
+        {
+            var manuscripts = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID==id);
+            manuscripts.Manuscript_Status = "主编审查";
+            sqlConnect.Update(manuscripts);
+            sqlConnect.SaveChanges();
+            return Ok(manuscripts);
+        }
+
+        // 获取稿件作者信息
+        [HttpGet("GetManuscriptAuthor")]
+        public IActionResult GetManuscriptAuthor(int id)
+        {
+            var author = sqlConnect.ManuscriptAuthor.Where(b => b.Manuscript_ID == 2).ToList();
+            return Ok(author);
+        }
+
+        [HttpGet("ReviewFirstManuscript")]
+        public IActionResult ReviewFirstManuscript(int id)
+        {
+            ReviewManuscriptModel model = new ReviewManuscriptModel();
+            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
+            model.Manuscript_ID = info.Manuscript_ID;
+            model.Manuscript_Name = info.Manuscript_Title;
+            model.ManuscriptColumn_ID = sqlConnect.ManuscriptColumn.FirstOrDefault(b => b.ManuscriptColumn_ID == info.ManuscriptColumn_ID).ManuscriptColumn_Name;
+            model.Author_ID = info.Author_ID;
+            model.Time = info.Time;
+            return Ok(model);
         }
     }
 }

@@ -24,13 +24,11 @@ namespace Contribution_system_Models
 
         public DbSet<Author> Authors { get; set; }
 
-        public DbSet<DraftManuscript> DraftManuscript { get; set; }
+        public DbSet<Manuscript> Manuscript { get; set; }
 
         public DbSet<Editor> Editors { get; set; }
 
         public DbSet<ManuscriptAuthor> ManuscriptAuthor { get; set; }
-
-        public DbSet<ManuscriptContent> ManuscriptContent { get; set; }
 
         public DbSet<ManuscriptSubmitted> ManuscriptSubmitted { get; set; }
 
@@ -39,6 +37,16 @@ namespace Contribution_system_Models
         public DbSet<ChiefEditor> ChiefEditor { get; set; }
 
         public DbSet<CompleteManuscript> CompleteManuscript { get; set; }
+
+        public DbSet<ManuscriptColumn> ManuscriptColumn{get;set;}
+
+        public DbSet<ManuscriptFile> ManuscriptFile { get; set; }
+
+        public DbSet<Expert> Expert { get; set; }
+
+        public DbSet<ExpertReview> ExpertReview { get; set; }
+
+        public DbSet<EditorReview> EditorReview { get; set; }
 
     }
 }

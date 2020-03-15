@@ -37,3 +37,11 @@ C:/Users/锐旭/Downloads/Contribution-system-Web-API-master/Contribution-system
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.dll
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.pdb
 /Volumes/Data/Data/毕业设计/Contribution-system-Web-API/Contribution-system-Models/obj/Debug/netstandard2.0/Contribution-system-Models.csprojAssemblyReference.cache
+F:\Contribution-system-Web-API\Contribution-system-Models\bin\Debug\netstandard2.0\Contribution-system-Models.deps.json
+F:\Contribution-system-Web-API\Contribution-system-Models\bin\Debug\netstandard2.0\Contribution-system-Models.dll
+F:\Contribution-system-Web-API\Contribution-system-Models\bin\Debug\netstandard2.0\Contribution-system-Models.pdb
+F:\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.csprojAssemblyReference.cache
+F:\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.AssemblyInfoInputs.cache
+F:\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.AssemblyInfo.cs
+F:\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.dll
+F:\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.pdb

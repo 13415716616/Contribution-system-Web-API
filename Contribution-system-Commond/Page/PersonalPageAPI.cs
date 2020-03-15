@@ -66,7 +66,7 @@ namespace Contribution_system_Commond.Page
         {
             SqlConnect sqlConnect=new SqlConnect();
             AuthorManuscriptNum num=new AuthorManuscriptNum();
-            num.DarftManuscript = sqlConnect.DraftManuscript.Count(b => b.Author_ID == id);
+            num.DarftManuscript = sqlConnect.Manuscript.Count(b => b.Author_ID == id);
             num.ReviewsManusript = sqlConnect.ManuscriptReview.Count(b => b.Author_ID == id);
             num.CompleteManuscript = sqlConnect.CompleteManuscript.Count(b => b.Author_ID == id);
             return num;

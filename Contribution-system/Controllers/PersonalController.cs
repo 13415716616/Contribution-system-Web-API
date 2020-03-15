@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Contribution_system_Models.Models;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Contribution_system.Controllers
 {
@@ -91,15 +92,51 @@ namespace Contribution_system.Controllers
         }
 
         //上传角色头像函数
-        [HttpPost("UpdateImg")]
+        [HttpPost("UpdateEditorImg")]
+        [Authorize]
         public IActionResult UpdateImg([FromForm] IFormFile file)
         {
-            try { 
-               return Ok();
-            }catch(Exception e)
+            SqlConnect sqlConnect = new SqlConnect();
+            var fpath = InfoPath.FilePath + "/wwwroot/File/Image/";
+            if (!Directory.Exists(fpath))
             {
-                return BadRequest(e);
+                Directory.CreateDirectory(fpath);
             }
+            FileStream stream = new FileStream(InfoPath.FilePath + "/wwwroot/File/Image/" + file.FileName, FileMode.Create);
+            file.CopyTo(stream);
+            var id = User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.Editors.FirstOrDefault(b => b.Editor_ID == id);
+            info.Editor_avtor =  "/File/Image/" + file.FileName;
+            sqlConnect.Update(info);
+            sqlConnect.SaveChanges();
+            return Ok(info.Editor_avtor);
+        }
+
+        // 获取编辑的个人信息
+        [HttpGet("GetEditorPersonalInfo")]
+        [Authorize]
+        public IActionResult GetEditorPersonalInfo()
+        {
+            SqlConnect sqlConnect = new SqlConnect();
+            var id = User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.Editors.FirstOrDefault(b => b.Editor_ID == id);
+            return Ok(info);
+        }
+
+        [HttpPost("UpdateEditorInfo")]
+        public IActionResult UpdateEditorInfo([FromBody] Editor editor)
+        {
+            SqlConnect sqlConnect = new SqlConnect();
+            var info= sqlConnect.Editors.FirstOrDefault(b => b.Editor_ID == editor.Editor_ID);
+            info.Editor_Name = editor.Editor_Name;
+            info.Editor_Sex = editor.Editor_Sex;
+            info.Editor_Phone = editor.Editor_Phone;
+            info.Editor_Email = editor.Editor_Email;
+            info.Editor_Education = editor.Editor_Education;
+            info.Editor_Dec = editor.Editor_Dec;
+            sqlConnect.Update(info);
+            sqlConnect.SaveChanges();
+            return Ok();
         }
     }
 }

@@ -15,18 +15,40 @@ namespace Contribution_system_Models.WebModel
         }
     }
 
-    public class ManuscriptAuthor
+    public class ManuscriptTable
     {
-        public int Manscript_ID { get; set; }
+        public int Manuscript_ID { get; set; }
 
-        public string Author_name { get; set; }
+        public string Manuscript_Title { get; set; }
 
-        public string Author_sex { get; set; }
+        public string Author_ID { get; set; }
 
-        public string Author_Phone { get; set; }
+        public string Manuscript_Status { get; set; }
 
-        public string Author_Address { get; set; }
+        public string ManuscriptColumn { get; set; }
 
-        public string Author_dec { get; set; }
+        public string Time { get; set; }
+    }
+
+    public class ReviewManuscriptModel
+    {
+        public int Manuscript_ID { get; set; }
+
+        public string Manuscript_Name { get; set; }
+
+        public string ManuscriptColumn_ID { get; set; }
+
+        public string Author_ID { get; set; }
+
+        public string Time { get; set; }
+
+        public string File { get; set; }
+    }
+
+    public class FirstReview
+    {
+        public int Manuscript_ID { get; set; }
+        
+        public string ContentText { get; set; }
     }
 }

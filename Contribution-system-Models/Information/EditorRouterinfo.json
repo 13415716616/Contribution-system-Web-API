@@ -5,7 +5,7 @@
     "id": 1,
     "meta": {
       "icon": "dashboard",
-      "title": "仪表盘",
+      "title": "个人首页",
       "show": true
     },
     "component": "RouteView",
@@ -16,7 +16,7 @@
     "parentId": 1,
     "id": 7,
     "meta": {
-      "title": "工作台",
+      "title": "我的首页",
       "show": true
     },
     "component": "Workplace"
@@ -27,7 +27,7 @@
     "id": 10,
     "meta": {
       "icon": "dashboard",
-      "title": "稿件管理 ",
+      "title": "在线审稿 ",
       "show": true
     },
     "component": "PageView",
@@ -38,18 +38,29 @@
     "parentId": 10,
     "id": 11,
     "meta": {
-      "title": "选择审查稿件",
+      "title": "初审稿件",
       "show": true
     },
     "component": "ManuscriptReview",
     "path": "/EditorManuscript/ManuscriptReview"
   },
   {
+    "name": "ReviewFirstManuscript",
+    "parentId": 10,
+    "id": 11,
+    "meta": {
+      "title": "编辑初审稿件",
+      "show": false
+    },
+    "component": "ReviewFirstManuscript",
+    "path": "/EditorManuscript/ReviewFirstManuscript"
+  },
+  {
     "name": "ManuscriptEnquiry",
     "parentId": 10,
     "id": 12,
     "meta": {
-      "title": "审查中的稿件",
+      "title": "复审稿件",
       "show": true
     },
     "component": "ManuscriptEnquiry",
@@ -86,15 +97,37 @@
     "component": "FirstComplete"
   },
   {
+    "name": "GetEndManuscript",
+    "parentId": 10,
+    "id": 18,
+    "meta": {
+      "title": "已审稿件",
+      "show": true
+    },
+    "component": "GetEndManuscript",
+    "path": "/EditorManuscript/GetEndManuscript"
+  },
+  {
+    "name": "ReviewSecondManuscript",
+    "parentId": 10,
+    "id": 18,
+    "meta": {
+      "title": "审查复审稿件",
+      "show": true
+    },
+    "component": "ReviewSecondManuscript",
+    "path": "/EditorManuscript/ReviewSecondManuscript"
+  },
+  {
     "name": "account",
     "parentId": 0,
     "id": 10028,
     "meta": {
-      "title": "个人页",
+      "title": "个人中心",
       "icon": "user",
       "show": true
     },
-    "redirect": "/account/center",
+    "redirect": "/EditorPage/account/center",
     "component": "RouteView"
   },
   {
@@ -105,7 +138,7 @@
       "title": "个人中心",
       "show": true
     },
-    "component": "AccountCenter"
+    "component": "EditorAccountCenter"
   },
   {
     "name": "settings",
@@ -117,62 +150,18 @@
       "hideChildren": true,
       "show": true
     },
-    "redirect": "/account/settings/base",
-    "component": "AccountSettings"
+    "redirect": "/EditorPage/account/settings/base",
+    "component": "EditorAccountSettings"
   },
   {
-    "name": "BaseSettings",
-    "path": "/account/settings/base",
+    "name": "EditorBaseSettings",
+    "path": "/EditorPage/account/settings/base",
     "parentId": 10030,
     "id": 10031,
     "meta": {
       "title": "基本设置",
       "show": true
     },
-    "component": "BaseSettings"
-  },
-  {
-    "name": "SecuritySettings",
-    "path": "/account/settings/security",
-    "parentId": 10030,
-    "id": 10032,
-    "meta": {
-      "title": "安全设置",
-      "show": true
-    },
-    "component": "SecuritySettings"
-  },
-  {
-    "name": "CustomSettings",
-    "path": "/account/settings/custom",
-    "parentId": 10030,
-    "id": 10033,
-    "meta": {
-      "title": "个性化设置",
-      "show": true
-    },
-    "component": "CustomSettings"
-  },
-  {
-    "name": "BindingSettings",
-    "path": "/account/settings/binding",
-    "parentId": 10030,
-    "id": 10034,
-    "meta": {
-      "title": "账户绑定",
-      "show": false
-    },
-    "component": "BindingSettings"
-  },
-  {
-    "name": "NotificationSettings",
-    "path": "/account/settings/notification",
-    "parentId": 10030,
-    "id": 10034,
-    "meta": {
-      "title": "新消息通知",
-      "show": false
-    },
-    "component": "NotificationSettings"
+    "component": "EditorBaseSettings"
   }
 ]

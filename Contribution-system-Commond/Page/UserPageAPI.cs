@@ -53,6 +53,12 @@ namespace Contribution_system_Commond.Page
                 string token = UserCommond.SetToken(loginInfo.username, "Editor");
                 return token;
             }
+            var expertinfo = sqlConnect.Expert.FirstOrDefault(b => b.Expert_ID.Equals(loginInfo.username));
+            if (expertinfo != null && UserCommond.GetMD5Hash(expertinfo.Expert_Password).Equals(loginInfo.password))
+            {
+                string token = UserCommond.SetToken(loginInfo.username, "Expert");
+                return token;
+            }
             var authorinfo = sqlConnect.Authors.FirstOrDefault(b => b.Author_ID.Equals(loginInfo.username));
             if (authorinfo != null && UserCommond.GetMD5Hash(authorinfo.Author_Password).Equals(loginInfo.password))
             {
@@ -75,6 +81,8 @@ namespace Contribution_system_Commond.Page
                 return System.IO.File.ReadAllText(InfoPath.EditorRouterinfo);
             if (Role.Equals("Author"))
                 return System.IO.File.ReadAllText(InfoPath.AuthorRouterInfo);
+            if (Role.Equals("Expert"))
+                return System.IO.File.ReadAllText(InfoPath.ExpertRouterInfo);
             else
                 return "";
         }
@@ -118,6 +126,18 @@ namespace Contribution_system_Commond.Page
                 UserRoleInfo userRole = new UserRoleInfo();
                 userRole.id = id;
                 userRole.name = info.Editor_Name;
+                userRole.avatar = "/avatar2.jpg";
+                Console.WriteLine(InfoPath.ModelsPath);
+                userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));
+                var s = JsonConvert.SerializeObject(userRole);
+                return JsonConvert.SerializeObject(userRole);
+            }
+            if (role.Equals("Expert"))
+            {
+                var info = sqlConnect.Expert.FirstOrDefault(b => b.Expert_ID.Equals(id));
+                UserRoleInfo userRole = new UserRoleInfo();
+                userRole.id = id;
+                userRole.name = "奇效之";
                 userRole.avatar = "/avatar2.jpg";
                 Console.WriteLine(InfoPath.ModelsPath);
                 userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));

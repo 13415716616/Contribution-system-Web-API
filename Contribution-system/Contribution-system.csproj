@@ -6,13 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\**" />
-    <Content Remove="wwwroot\**" />
-    <EmbeddedResource Remove="wwwroot\**" />
-    <None Remove="wwwroot\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="SqlConnect.cs" />
   </ItemGroup>
 
@@ -27,6 +20,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Contribution-system-Commond\Contribution-system-Commond.csproj" />
     <ProjectReference Include="..\Contribution-system-Models\Contribution-system-Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

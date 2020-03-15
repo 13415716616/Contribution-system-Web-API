@@ -6,25 +6,37 @@ using static Contribution_system_Models.WebModel.ManuscriptModel;
 
 namespace Contribution_system_Models.Models
 {
-    public class DraftManuscript
-    {
+    public class Manuscript
+    {        
         [Key]
-        public int DraftManuscript_ID { get; set; }
+        public int Manuscript_ID { get; set; }
+      
         public string Author_ID { get; set; }
-        public string DraftManuscript_Title { get; set; }
-        public string DraftManuscript_Etitle { get; set; }
-        public string DraftManuscript_Keyword { get; set; }
-        public string DraftManuscript_Abstract { get; set; }
-        public string DraftManuscript_Reference { get; set; }
-        public string DraftManuscript_Text { get; set; }
-        public string DraftManuscript_MainDataPath { get; set; }
-        public string DraftManuscript_OtherDataPath { get; set; }
-        public ManuscriptMode DraftManuscript_Status { get; set; }
-        public string Author_name { get; set; }
-        public string Author_sex { get; set; }
-        public string Author_Phone { get; set; }
-        public string Author_Address { get; set; }
-        public string Author_dec { get; set; }
-        public string Edit_Time { get; set; }
+
+        public string Manuscript_Title { get; set; }
+
+        public string Manuscript_Etitle { get; set; }
+
+        public string Manuscript_Keyword { get; set; }
+
+        public string Manuscript_EKeyword { get; set; }
+
+        public string Manuscript_Abstract { get; set; }
+
+        public string Manuscript_EAbstract { get; set; }
+
+        public string Manuscript_Reference { get; set; }
+
+        public string Manuscript_Content { get; set; }
+
+        public string Manuscript_Status { get; set; }
+
+        public int ManuscriptColumn_ID { get; set; }
+
+        public string Editor_ID { get; set; }
+
+        public string ChiefEditor_ID { get; set; }
+
+        public string Time { get; set; }
     }
 }

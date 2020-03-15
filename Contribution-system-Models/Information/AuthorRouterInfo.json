@@ -5,7 +5,7 @@
     "id": 1,
     "meta": {
       "icon": "dashboard",
-      "title": "首页",
+      "title": "首页信息",
       "show": true
     },
     "component": "RouteView",
@@ -16,7 +16,7 @@
     "parentId": 1,
     "id": 7,
     "meta": {
-      "title": "个人首页",
+      "title": "我的首页",
       "show": true
     },
     "component": "Workplace"
@@ -27,7 +27,7 @@
     "id": 10,
     "meta": {
       "icon": "form",
-      "title": "投稿管理"
+      "title": "网络投稿"
     },
     "redirect": "/Manuscript/ContributePage",
     "component": "PageView"
@@ -38,7 +38,7 @@
     "parentId": 10,
     "id": 101,
     "meta": {
-      "title": "我要投稿",
+      "title": "在线投稿",
       "show": true
     },
     "component": "ContributePage"
@@ -66,12 +66,23 @@
     "component": "ModifyDraftManuscript"
   },
   {
+    "name": "ManagementManuscript",
+    "parentId": 0,
+    "id": 20,
+    "meta": {
+      "icon": "form",
+      "title": "稿件管理"
+    },
+    "redirect": "/ManagementManuscript/ManuscriptSubmitted",
+    "component": "PageView"
+  },
+  {
 
     "name": "ManuscriptSubmitted",
-    "parentId": 10,
-    "id": 103,
+    "parentId": 20,
+    "id": 201,
     "meta": {
-      "title": "已投稿件",
+      "title": "审查中稿件",
       "show": true
     },
     "component": "ManuscriptSubmitted"
@@ -79,8 +90,8 @@
   {
 
     "name": "ShowManscript",
-    "parentId": 10,
-    "id": 104,
+    "parentId": 20,
+    "id": 202,
     "meta": {
       "title": "查看稿件",
       "show": false
@@ -91,7 +102,7 @@
 
     "name": "ShowEditorInfo",
     "parentId": 10,
-    "id": 105,
+    "id": 203,
     "meta": {
       "title": "查看留言",
       "show": false
@@ -99,10 +110,9 @@
     "component": "ShowEditorInfo"
   },
   {
-
     "name": "AuthorCompleteManuscript",
     "parentId": 10,
-    "id": 106,
+    "id": 204,
     "meta": {
       "title": "通过稿件",
       "show": true
@@ -113,7 +123,7 @@
 
     "name": "ShowAuthorCompleteManuscript",
     "parentId": 10,
-    "id": 107,
+    "id": 205,
     "meta": {
       "title": "查看稿件",
       "show": false
@@ -125,7 +135,7 @@
     "parentId": 0,
     "id": 10028,
     "meta": {
-      "title": "个人页",
+      "title": "个人页面",
       "icon": "user",
       "show": true
     },
@@ -165,27 +175,5 @@
       "show": true
     },
     "component": "BaseSettings"
-  },
-  {
-    "name": "CustomSettings",
-    "path": "/account/settings/custom",
-    "parentId": 10030,
-    "id": 10033,
-    "meta": {
-      "title": "个性化设置",
-      "show": true
-    },
-    "component": "CustomSettings"
-  },
-  {
-    "name": "NotificationSettings",
-    "path": "/account/settings/notification",
-    "parentId": 10030,
-    "id": 10034,
-    "meta": {
-      "title": "新消息通知",
-      "show": false
-    },
-    "component": "NotificationSettings"
   }
 ]

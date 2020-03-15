@@ -1,0 +1,155 @@
+﻿[
+  {
+    "name": "dashboard",
+    "parentId": 0,
+    "id": 1,
+    "meta": {
+      "icon": "dashboard",
+      "title": "仪表盘",
+      "show": true
+    },
+    "component": "RouteView",
+    "redirect": "/dashboard/workplace"
+  },
+  {
+    "name": "workplace",
+    "parentId": 1,
+    "id": 7,
+    "meta": {
+      "title": "工作台",
+      "show": true
+    },
+    "component": "Workplace"
+  },
+  {
+    "name": "Analysis",
+    "parentId": 1,
+    "id": 2,
+    "meta": {
+      "title": "分析页",
+      "show": true
+    },
+    "component": "Analysis",
+    "path": "/dashboard/analysis"
+  },
+  {
+    "name": "ChiefEditManuscript",
+    "parentId": 0,
+    "id": 3,
+    "meta": {
+      "icon": "dashboard",
+      "title": "稿件管理",
+      "show": true
+    },
+    "component": "PageView",
+    "redirect": "/ChiefEditManuscript/SelectManuscript"
+  },
+  {
+    "name": "SelectManuscript",
+    "parentId": 3,
+    "id": 31,
+    "meta": {
+      "title": "选择审查稿件",
+      "show": true
+    },
+    "component": "ExpertReviewManuscript"
+  },
+  {
+    "name": "ReviewManuscript",
+    "parentId": 3,
+    "id": 38,
+    "meta": {
+      "title": "审查稿件",
+      "show": true
+    },
+    "component": "ReviewManuscript"
+  },
+  {
+    "name": "ShowChiefManuscript",
+    "parentId": 3,
+    "id": 32,
+    "meta": {
+      "title": "查看稿件",
+      "show": false
+    },
+    "component": "ShowChiefManuscript"
+  },
+  {
+    "name": "CommentChiefManuscript",
+    "parentId": 3,
+    "id": 33,
+    "meta": {
+      "title": "查看评论",
+      "show": false
+    },
+    "component": "CommentChiefManuscript"
+  },
+  {
+    "name": "CompleteManuscript",
+    "parentId": 3,
+    "id": 34,
+    "meta": {
+      "title": "稿件通过",
+      "show": true
+    },
+    "component": "CompleteManuscript"
+  },
+  {
+    "name": "ShowCompleteManuscript",
+    "parentId": 3,
+    "id": 35,
+    "meta": {
+      "title": "通过稿件",
+      "show": true
+    },
+    "component": "ShowCompleteManuscript"
+  },
+  {
+    "name": "MyReviewManuscript",
+    "parentId": 3,
+    "id": 36,
+    "meta": {
+      "title": "我审核中稿件",
+      "show": true
+    },
+    "component": "MyReviewManuscript"
+  },
+  {
+    "name": "form",
+    "parentId": 0,
+    "id": 20,
+    "meta": {
+      "icon": "form",
+      "title": "表单页"
+    },
+    "redirect": "/form/base-form",
+    "component": "PageView"
+  },
+  {
+    "name": "basic-form",
+    "parentId": 20,
+    "id": 6,
+    "meta": {
+      "title": "基础表单"
+    },
+    "component": "BasicForm"
+  },
+  {
+    "name": "step-form",
+    "parentId": 20,
+    "id": 5,
+    "meta": {
+      "title": "分步表单"
+    },
+    "component": "StepForm"
+  },
+  {
+    "name": "advanced-form",
+    "parentId": 20,
+    "id": 4,
+    "meta": {
+      "title": "高级表单"
+    },
+    "component": "AdvanceForm"
+  }
+]

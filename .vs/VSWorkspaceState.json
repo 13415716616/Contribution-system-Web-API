@@ -2,7 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Contribution-system",
-    "\\Contribution-system\\Controllers"
+    "\\Contribution-system-Models",
+    "\\Contribution-system-Models\\Models",
+    "\\Contribution-system\\Controllers",
+    "\\Contribution-system\\wwwroot",
+    "\\Contribution-system\\wwwroot\\File"
   ],
   "SelectedNode": "\\Contribution-system.sln",
   "PreviewInSolutionExplorer": false

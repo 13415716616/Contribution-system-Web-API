@@ -14,10 +14,16 @@ namespace Contribution_system_Models.Models
 
         public string Editor_Password { get; set; }
 
+        public string Editor_Sex { get; set; }
+
+        public string Editor_Education { get; set; }
+
         public string Editor_Phone { get; set; }
 
         public string Editor_Email { get; set; }
 
         public string Editor_Dec { get; set; }
+
+        public string Editor_avtor { get; set; }
     }
 }
