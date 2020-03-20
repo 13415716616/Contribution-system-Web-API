@@ -5,32 +5,21 @@
     "id": 1,
     "meta": {
       "icon": "dashboard",
-      "title": "仪表盘",
+      "title": "个人首页",
       "show": true
     },
     "component": "RouteView",
-    "redirect": "/dashboard/workplace"
+    "redirect": "/dashboard/ExpertWorkplace"
   },
   {
-    "name": "workplace",
+    "name": "ExpertWorkplace",
     "parentId": 1,
     "id": 7,
     "meta": {
       "title": "工作台",
       "show": true
     },
-    "component": "Workplace"
-  },
-  {
-    "name": "Analysis",
-    "parentId": 1,
-    "id": 2,
-    "meta": {
-      "title": "分析页",
-      "show": true
-    },
-    "component": "Analysis",
-    "path": "/dashboard/analysis"
+    "component": "ExpertWorkplace"
   },
   {
     "name": "ChiefEditManuscript",
@@ -60,19 +49,19 @@
     "id": 38,
     "meta": {
       "title": "审查稿件",
-      "show": true
+      "show": false
     },
     "component": "ReviewManuscript"
   },
   {
-    "name": "ShowChiefManuscript",
+    "name": "ShowExpertManuscript",
     "parentId": 3,
     "id": 32,
     "meta": {
       "title": "查看稿件",
       "show": false
     },
-    "component": "ShowChiefManuscript"
+    "component": "ShowExpertManuscript"
   },
   {
     "name": "CommentChiefManuscript",
@@ -95,14 +84,14 @@
     "component": "CompleteManuscript"
   },
   {
-    "name": "ShowCompleteManuscript",
+    "name": "ShowExpertComplete",
     "parentId": 3,
     "id": 35,
     "meta": {
       "title": "通过稿件",
       "show": true
     },
-    "component": "ShowCompleteManuscript"
+    "component": "ShowExpertComplete"
   },
   {
     "name": "MyReviewManuscript",
@@ -115,41 +104,49 @@
     "component": "MyReviewManuscript"
   },
   {
-    "name": "form",
+    "name": "account",
     "parentId": 0,
-    "id": 20,
+    "id": 10028,
     "meta": {
-      "icon": "form",
-      "title": "表单页"
+      "title": "个人中心",
+      "icon": "user",
+      "show": true
     },
-    "redirect": "/form/base-form",
-    "component": "PageView"
+    "redirect": "/ExpertPage/account/center",
+    "component": "RouteView"
   },
   {
-    "name": "basic-form",
-    "parentId": 20,
-    "id": 6,
+    "name": "center",
+    "parentId": 10028,
+    "id": 10029,
     "meta": {
-      "title": "基础表单"
+      "title": "个人中心",
+      "show": true
     },
-    "component": "BasicForm"
+    "component": "ExpertAccountCenter"
   },
   {
-    "name": "step-form",
-    "parentId": 20,
-    "id": 5,
+    "name": "settings",
+    "parentId": 10028,
+    "id": 10030,
     "meta": {
-      "title": "分步表单"
+      "title": "个人设置",
+      "hideHeader": true,
+      "hideChildren": true,
+      "show": true
     },
-    "component": "StepForm"
+    "redirect": "/ExpertPage/account/settings/base",
+    "component": "ExpertAccountSettings"
   },
   {
-    "name": "advanced-form",
-    "parentId": 20,
-    "id": 4,
+    "name": "ExpertBaseSettings",
+    "path": "/ExpertPage/account/settings/base",
+    "parentId": 10030,
+    "id": 10031,
     "meta": {
-      "title": "高级表单"
+      "title": "基本设置",
+      "show": true
     },
-    "component": "AdvanceForm"
+    "component": "ExpertBaseSettings"
   }
 ]

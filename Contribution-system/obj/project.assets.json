@@ -9501,11 +9501,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj",
+      "projectUniqueName": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj",
       "projectName": "Contribution-system",
-      "projectPath": "F:\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj",
+      "projectPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\Contribution-system.csproj",
       "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
-      "outputPath": "F:\\Contribution-system-Web-API\\Contribution-system\\obj\\",
+      "outputPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9521,11 +9521,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "F:\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj": {
-              "projectPath": "F:\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj"
+            "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj": {
+              "projectPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj"
             },
-            "F:\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
-              "projectPath": "F:\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj"
+            "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
+              "projectPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj"
             }
           }
         }

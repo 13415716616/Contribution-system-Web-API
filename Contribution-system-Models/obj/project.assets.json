@@ -6220,11 +6220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj",
+      "projectUniqueName": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj",
       "projectName": "Contribution-system-Models",
-      "projectPath": "F:\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj",
+      "projectPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj",
       "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
-      "outputPath": "F:\\Contribution-system-Web-API\\Contribution-system-Models\\obj\\",
+      "outputPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",

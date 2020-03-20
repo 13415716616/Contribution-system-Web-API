@@ -61,3 +61,14 @@ F:\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard
 F:\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csproj.CopyComplete
 F:\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.dll
 F:\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.pdb
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Commond.deps.json
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Commond.dll
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Commond.pdb
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Models.dll
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\bin\Debug\netstandard2.0\Contribution-system-Models.pdb
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csprojAssemblyReference.cache
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.AssemblyInfoInputs.cache
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.AssemblyInfo.cs
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csproj.CopyComplete
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.dll
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.pdb

@@ -61,7 +61,7 @@
     "id": 1011,
     "meta": {
       "title": "修改草稿箱稿件",
-      "show": true
+      "show": false
     },
     "component": "ModifyDraftManuscript"
   },
@@ -89,6 +89,17 @@
   },
   {
 
+    "name": "ShowProgress",
+    "parentId": 20,
+    "id": 2011,
+    "meta": {
+      "title": "进度审查中稿件",
+      "show": true
+    },
+    "component": "ShowProgress"
+  },
+  {
+
     "name": "ShowManscript",
     "parentId": 20,
     "id": 202,
@@ -111,7 +122,7 @@
   },
   {
     "name": "AuthorCompleteManuscript",
-    "parentId": 10,
+    "parentId": 20,
     "id": 204,
     "meta": {
       "title": "通过稿件",
@@ -135,11 +146,11 @@
     "parentId": 0,
     "id": 10028,
     "meta": {
-      "title": "个人页面",
+      "title": "个人中心",
       "icon": "user",
       "show": true
     },
-    "redirect": "/account/center",
+    "redirect": "/AuthorPage/account/center",
     "component": "RouteView"
   },
   {
@@ -150,7 +161,7 @@
       "title": "个人中心",
       "show": true
     },
-    "component": "AccountCenter"
+    "component": "AuthorAccountCenter"
   },
   {
     "name": "settings",
@@ -162,18 +173,18 @@
       "hideChildren": true,
       "show": true
     },
-    "redirect": "/account/settings/custom",
-    "component": "AccountSettings"
+    "redirect": "/AuthorPage/account/settings/base",
+    "component": "AuthorAccountSettings"
   },
   {
-    "name": "BaseSettings",
-    "path": "/account/settings/BaseSettings",
+    "name": "AuhtorBaseSettings",
+    "path": "/AuthorPage/account/settings/base",
     "parentId": 10030,
     "id": 10031,
     "meta": {
       "title": "基本设置",
       "show": true
     },
-    "component": "BaseSettings"
+    "component": "AuthorBaseSettings"
   }
 ]

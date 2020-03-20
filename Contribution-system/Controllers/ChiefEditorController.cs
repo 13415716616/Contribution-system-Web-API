@@ -19,14 +19,7 @@ namespace Contribution_system.Controllers
         public ChiefEditorController(SqlConnect sqlConnect)
         {
             this.sqlConnect = sqlConnect;
-        }
-
-        [HttpGet("GetSecondManuscript")]
-        public IActionResult GetSecondManuscript()
-        {
-            List<ManuscriptReview> manuscripts = sqlConnect.ManuscriptReview.Where(b => b.ManuscriptReview_Second_Info == null&&b.ManuscriptReview_Status=="等待主编审查").ToList();
-            return Ok(manuscripts);
-        }
+        }       
 
         [HttpGet("CompleteManuscript")]
         public IActionResult AdoptionManuscript(int id)
@@ -59,6 +52,38 @@ namespace Contribution_system.Controllers
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;
             var info = sqlConnect.ManuscriptReview.Where(b => b.ChiefEditor_ID == id && b.ManuscriptReview_Status == "主编审查中");
+            return Ok(info);
+        }
+
+        [HttpGet("GetChiefEditorManuscript")]
+        public IActionResult GetChiefEditorManuscript()
+        {
+            List<Manuscript> manuscripts = sqlConnect.Manuscript.Where(b => b.Manuscript_Status == "等待主编审查").ToList();
+            return Ok(manuscripts);
+        }
+
+        [HttpGet("GetExpertReviewInfo")]
+        public IActionResult GetExpertReviewInfo(int id)
+        {
+            var info = sqlConnect.ExpertReview.FirstOrDefault(b => b.Manuscript_ID == id);
+            return Ok(info);
+        }
+
+        [HttpPost("CompleteManuscript")]
+        public IActionResult CompleteManuscript([FromBody] EditorReview review)
+        {
+            review.Editor_Type = "主编终审";
+            review.Review_Time = DateTime.Now.ToString();
+            review.Editor_ID= User.FindFirst(ClaimTypes.Name)?.Value;
+            sqlConnect.EditorReview.Add(review);
+            sqlConnect.SaveChanges();
+            return Ok();
+        }
+
+        [HttpGet("GetCompleteManuscript")]
+        public IActionResult GetCompleteManuscript()
+        {
+            var info= sqlConnect.Manuscript.Where(b => b.Manuscript_Status == "通过稿件").ToList();
             return Ok(info);
         }
     }

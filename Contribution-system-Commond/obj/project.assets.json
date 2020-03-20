@@ -6468,11 +6468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
+      "projectUniqueName": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
       "projectName": "Contribution-system-Commond",
-      "projectPath": "F:\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
+      "projectPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\Contribution-system-Commond.csproj",
       "packagesPath": "C:\\Users\\wuwei\\.nuget\\packages\\",
-      "outputPath": "F:\\Contribution-system-Web-API\\Contribution-system-Commond\\obj\\",
+      "outputPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Commond\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wuwei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6488,8 +6488,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "F:\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
-              "projectPath": "F:\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj"
+            "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj": {
+              "projectPath": "E:\\毕业设计\\Contribution-system-Web-API\\Contribution-system-Models\\Contribution-system-Models.csproj"
             }
           }
         }

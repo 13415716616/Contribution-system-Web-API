@@ -12,9 +12,13 @@ namespace Contribution_system_Models.Models
 
         public string Expert_Password { get; set; }
 
+        public string Expert_Name { get; set; }
+
         public string Expert_Sex { get; set; }
 
         public string Expert_Education { get; set; }
+
+        public string Expert_Email { get; set; }
 
         public string Expert_Occupation { get; set; }
 
@@ -25,5 +29,9 @@ namespace Contribution_system_Models.Models
         public string Expert_Address { get; set; }
 
         public string Expert_Dec { get; set; }
+        
+        public string Expert_avtor { get; set; }
+
+        
     }
 }

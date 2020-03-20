@@ -22,15 +22,26 @@
     "component": "Workplace"
   },
   {
-    "name": "Analysis",
-    "parentId": 1,
-    "id": 2,
+    "name": "ChiefEditor",
+    "parentId": 0,
+    "id": 6,
     "meta": {
-      "title": "分析页",
+      "icon": "dashboard",
+      "title": "个人首页",
       "show": true
     },
-    "component": "Analysis",
-    "path": "/dashboard/analysis"
+    "component": "RouteView",
+    "redirect": "/ChiefEditor/ChiefEditorWorkplace"
+  },
+  {
+    "name": "ChiefEditorWorkplace",
+    "parentId": 6,
+    "id": 67,
+    "meta": {
+      "title": "我的首页",
+      "show": true
+    },
+    "component": "ChiefEditorWorkplace"
   },
   {
     "name": "ChiefEditManuscript",
@@ -85,6 +96,16 @@
     "component": "CompleteManuscript"
   },
   {
+    "name": "ReviewsChiefManuscript",
+    "parentId": 3,
+    "id": 37,
+    "meta": {
+      "title": "审核稿件",
+      "show": false
+    },
+    "component": "ReviewsChiefManuscript"
+  },
+  {
     "name": "ShowCompleteManuscript",
     "parentId": 3,
     "id": 35,
@@ -105,41 +126,49 @@
     "component": "MyReviewManuscript"
   },
   {
-    "name": "form",
+    "name": "account",
     "parentId": 0,
-    "id": 20,
+    "id": 10028,
     "meta": {
-      "icon": "form",
-      "title": "表单页"
+      "title": "个人中心",
+      "icon": "user",
+      "show": true
     },
-    "redirect": "/form/base-form",
-    "component": "PageView"
+    "redirect": "/ChiefEditorPage/account/center",
+    "component": "RouteView"
   },
   {
-    "name": "basic-form",
-    "parentId": 20,
-    "id": 6,
+    "name": "center",
+    "parentId": 10028,
+    "id": 10029,
     "meta": {
-      "title": "基础表单"
+      "title": "个人中心",
+      "show": true
     },
-    "component": "BasicForm"
+    "component": "ChiefEditorAccountCenter"
   },
   {
-    "name": "step-form",
-    "parentId": 20,
-    "id": 5,
+    "name": "settings",
+    "parentId": 10028,
+    "id": 10030,
     "meta": {
-      "title": "分步表单"
+      "title": "个人设置",
+      "hideHeader": true,
+      "hideChildren": true,
+      "show": true
     },
-    "component": "StepForm"
+    "redirect": "/ChiefEditorPage/account/settings/base",
+    "component": "ChiefEditorAccountSettings"
   },
   {
-    "name": "advanced-form",
-    "parentId": 20,
-    "id": 4,
+    "name": "ChiefEditorBaseSettings",
+    "path": "/ChiefEditorPage/account/settings/base",
+    "parentId": 10030,
+    "id": 10031,
     "meta": {
-      "title": "高级表单"
+      "title": "基本设置",
+      "show": true
     },
-    "component": "AdvanceForm"
+    "component": "ChiefEditorBaseSettings"
   }
 ]

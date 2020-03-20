@@ -129,9 +129,20 @@ namespace Contribution_system.Controllers
         public IActionResult CompleteManuscript([FromBody] Manuscript manuscript)
         {
             SqlConnect sqlConnect = new SqlConnect();
-            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == manuscript.Manuscript_ID);
+            // var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == manuscript.Manuscript_ID);
+            manuscript.Manuscript_Status = "等待编辑审查";
+            sqlConnect.Add(manuscript);
+            sqlConnect.SaveChanges();
+            return Ok();
+        }
+
+        [HttpGet("CompleteManuscriptID")]
+        public IActionResult CompleteManuscriptID(int id)
+        {
+            SqlConnect sqlConnect = new SqlConnect();
+            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
             info.Manuscript_Status = "等待编辑审查";
-            sqlConnect.Update(manuscript);
+            sqlConnect.Update(info);
             sqlConnect.SaveChanges();
             return Ok();
         }
@@ -146,6 +157,14 @@ namespace Contribution_system.Controllers
             sqlConnect.Remove(author);
             sqlConnect.SaveChanges();
             return Ok();
+        }
+
+        [HttpGet("GetReviewManuscript")]
+        public IActionResult GetReviewManuscript()
+        {
+            var id= User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.Manuscript.Where(b => b.Author_ID == id&&b.Manuscript_Status!="稿件编辑中"&&b.Manuscript_Status!="稿件通过").ToList();
+            return Ok(info);
         }
     }
 }

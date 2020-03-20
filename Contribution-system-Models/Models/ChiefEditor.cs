@@ -14,6 +14,12 @@ namespace Contribution_system_Models.Models
 
         public string ChiefEditor_Password { get; set; }
 
+        public string ChiefEditor_Sex { get; set; }
+
+        public string ChiefEditor_Education { get; set; }
+
+        public string ChiefEditor_avtor { get; set; }
+
         public string ChiefEditor_Phone { get; set; }
 
         public string ChiefEditor_Email { get; set; }

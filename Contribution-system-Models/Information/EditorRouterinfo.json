@@ -97,17 +97,6 @@
     "component": "FirstComplete"
   },
   {
-    "name": "GetEndManuscript",
-    "parentId": 10,
-    "id": 18,
-    "meta": {
-      "title": "已审稿件",
-      "show": true
-    },
-    "component": "GetEndManuscript",
-    "path": "/EditorManuscript/GetEndManuscript"
-  },
-  {
     "name": "ReviewSecondManuscript",
     "parentId": 10,
     "id": 18,
@@ -117,6 +106,29 @@
     },
     "component": "ReviewSecondManuscript",
     "path": "/EditorManuscript/ReviewSecondManuscript"
+  },
+  {
+    "name": "ManagementManuscript",
+    "parentId": 0,
+    "id": 50,
+    "meta": {
+      "icon": "dashboard",
+      "title": "稿件管理 ",
+      "show": true
+    },
+    "component": "PageView",
+    "redirect": "/ManagementManuscript/ManuscriptReview"
+  },
+  {
+    "name": "GetEndManuscript",
+    "parentId": 50,
+    "id": 58,
+    "meta": {
+      "title": "已审稿件",
+      "show": true
+    },
+    "component": "GetEndManuscript",
+    "path": "/ManagementManuscript/GetEndManuscript"
   },
   {
     "name": "account",
