@@ -31,10 +31,10 @@ namespace Contribution_system.Controllers
             sw.Start();
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
             List<Manuscript> list= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑审查")).ToList();
-            var info = new List<ManuscriptTable>();
-            ManuscriptTable t = new ManuscriptTable();
+            var info = new List<ManuscriptTable>();            
             foreach (var i in list)
             {
+                ManuscriptTable t = new ManuscriptTable();
                 t.Manuscript_ID = i.Manuscript_ID;
                 t.Manuscript_Title = i.Manuscript_Title;
                 t.Author_ID = i.Author_ID;
@@ -121,9 +121,9 @@ namespace Contribution_system.Controllers
         [Authorize]
         public IActionResult GetEndManuscript()
         {
-            //var id= User.FindFirst(ClaimTypes.Name)?.Value;
-            // var info = sqlConnect.Manuscript.Where(b => b.Editor_ID == id).ToList();
-            return Ok();
+            var id= User.FindFirst(ClaimTypes.Name)?.Value;
+            var info = sqlConnect.Manuscript.Where(b => b.Manuscript_Status=="等待主编审查"||b.Manuscript_Status=="等待专家审查").ToList();
+            return Ok(info);
         }
 
         [HttpGet("GetManuscript")]
@@ -155,11 +155,18 @@ namespace Contribution_system.Controllers
         [HttpPost("CompleteSecondEdiotrManuscript")]
         public IActionResult CompleteSecondEdiotrManuscript([FromBody] FirstReview manuscript)
         {
-            var manuscripts = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID==manuscript.Manuscript_ID);
-            manuscripts.Manuscript_Status = "等待主编审查";
-            sqlConnect.Update(manuscripts);
+            var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == manuscript.Manuscript_ID);
+            info.Manuscript_Status = "等待主编审查";
+            EditorReview review = new EditorReview();
+            review.Editor_ID = User.FindFirst(ClaimTypes.Name)?.Value;
+            review.Editor_Type = "复审编辑";
+            review.Editor_Opinion = manuscript.ContentText;
+            review.Manuscript_ID = manuscript.Manuscript_ID;
+            review.Review_Time = DateTime.Now.ToString();
+            sqlConnect.Update(info);
+            sqlConnect.EditorReview.Add(review);
             sqlConnect.SaveChanges();
-            return Ok(manuscripts);
+            return Ok();
         }
 
         // 获取稿件作者信息

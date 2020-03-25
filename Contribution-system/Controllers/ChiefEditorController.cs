@@ -53,6 +53,10 @@ namespace Contribution_system.Controllers
             review.Editor_ID= User.FindFirst(ClaimTypes.Name)?.Value;
             var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == review.Manuscript_ID);
             info.Manuscript_Status = "采纳稿件";
+            Layout layout = new Layout();
+            layout.Manuscript_ID = review.Manuscript_ID;
+            layout.Layout_Image = "/Layout/Manuscript/timg.jpg";
+            sqlConnect.Layout.Add(layout);
             sqlConnect.Update(info);
             sqlConnect.EditorReview.Add(review);
             sqlConnect.SaveChanges();
