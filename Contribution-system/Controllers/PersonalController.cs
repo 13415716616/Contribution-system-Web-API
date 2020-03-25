@@ -49,13 +49,13 @@ namespace Contribution_system.Controllers
             }
         }
 
-        [HttpGet("GetCompleteManuscript")]
-        public IActionResult GetCompleteManuscript()
-        {
-            var id= User.FindFirst(ClaimTypes.Name)?.Value;
-            var list= PersonalPageAPI.GetCompleteManuscript(id);
-            return Ok(list);
-        }
+        //[HttpGet("GetCompleteManuscript")]
+        //public IActionResult GetCompleteManuscript()
+        //{
+        //    var id= User.FindFirst(ClaimTypes.Name)?.Value;
+        //    var list= PersonalPageAPI.GetCompleteManuscript(id);
+        //    return Ok(list);
+        //}
 
         //获取稿件个数
         [HttpGet("GetAuthorManuscriptNum")]

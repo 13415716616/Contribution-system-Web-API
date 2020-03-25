@@ -30,7 +30,7 @@ namespace Contribution_system.Controllers
             Stopwatch sw = new Stopwatch();
             sw.Start();
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
-            List<Manuscript> list= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑初审")).ToList();
+            List<Manuscript> list= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑审查")).ToList();
             var info = new List<ManuscriptTable>();
             ManuscriptTable t = new ManuscriptTable();
             foreach (var i in list)
@@ -121,9 +121,9 @@ namespace Contribution_system.Controllers
         [Authorize]
         public IActionResult GetEndManuscript()
         {
-            var id= User.FindFirst(ClaimTypes.Name)?.Value;
-            var info = sqlConnect.Manuscript.Where(b => b.Editor_ID == id).ToList();
-            return Ok(info);
+            //var id= User.FindFirst(ClaimTypes.Name)?.Value;
+            // var info = sqlConnect.Manuscript.Where(b => b.Editor_ID == id).ToList();
+            return Ok();
         }
 
         [HttpGet("GetManuscript")]
@@ -148,15 +148,15 @@ namespace Contribution_system.Controllers
         public IActionResult GetSecondEdiotrManuscript()
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;          
-            var manuscripts = sqlConnect.Manuscript.Where(b =>b.Manuscript_Status =="等待主编复审").ToList();
+            var manuscripts = sqlConnect.Manuscript.Where(b =>b.Manuscript_Status =="等待编辑复审").ToList();
             return Ok(manuscripts);
         }
 
-        [HttpGet("CompleteSecondEdiotrManuscript")]
-        public IActionResult CompleteSecondEdiotrManuscript(int id)
+        [HttpPost("CompleteSecondEdiotrManuscript")]
+        public IActionResult CompleteSecondEdiotrManuscript([FromBody] FirstReview manuscript)
         {
-            var manuscripts = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID==id);
-            manuscripts.Manuscript_Status = "主编审查";
+            var manuscripts = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID==manuscript.Manuscript_ID);
+            manuscripts.Manuscript_Status = "等待主编审查";
             sqlConnect.Update(manuscripts);
             sqlConnect.SaveChanges();
             return Ok(manuscripts);

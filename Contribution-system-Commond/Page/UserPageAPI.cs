@@ -114,7 +114,7 @@ namespace Contribution_system_Commond.Page
                 UserRoleInfo userRole = new UserRoleInfo();
                 userRole.id = id;
                 userRole.name = info.Author_Name;
-                userRole.avatar = "/avatar2.jpg";
+                userRole.avatar = info.Author_Avtor;
                 Console.WriteLine(InfoPath.ModelsPath);
                 userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));
                 var s = JsonConvert.SerializeObject(userRole);
@@ -126,7 +126,7 @@ namespace Contribution_system_Commond.Page
                 UserRoleInfo userRole = new UserRoleInfo();
                 userRole.id = id;
                 userRole.name = info.Editor_Name;
-                userRole.avatar = "/avatar2.jpg";
+                userRole.avatar = info.Editor_avtor;
                 Console.WriteLine(InfoPath.ModelsPath);
                 userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));
                 var s = JsonConvert.SerializeObject(userRole);
@@ -137,8 +137,8 @@ namespace Contribution_system_Commond.Page
                 var info = sqlConnect.Expert.FirstOrDefault(b => b.Expert_ID.Equals(id));
                 UserRoleInfo userRole = new UserRoleInfo();
                 userRole.id = id;
-                userRole.name = "奇效之";
-                userRole.avatar = "/avatar2.jpg";
+                userRole.name = info.Expert_Name;
+                userRole.avatar = info.Expert_avtor;
                 Console.WriteLine(InfoPath.ModelsPath);
                 userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));
                 var s = JsonConvert.SerializeObject(userRole);

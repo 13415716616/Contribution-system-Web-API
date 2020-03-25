@@ -55,20 +55,13 @@ namespace Contribution_system_Commond.Page
             }
         }
 
-        public static List<CompleteManuscript> GetCompleteManuscript(string id)
-        {
-            SqlConnect sqlConnect = new SqlConnect();
-            var lists = sqlConnect.CompleteManuscript.Where(b => b.Author_ID == id).ToList();
-            return lists;
-        }
-
         public static AuthorManuscriptNum GetAuthorManuscriptNumNum(string id)
         {
             SqlConnect sqlConnect=new SqlConnect();
             AuthorManuscriptNum num=new AuthorManuscriptNum();
             num.DarftManuscript = sqlConnect.Manuscript.Count(b => b.Author_ID == id);
             num.ReviewsManusript = sqlConnect.ManuscriptReview.Count(b => b.Author_ID == id);
-            num.CompleteManuscript = sqlConnect.CompleteManuscript.Count(b => b.Author_ID == id);
+          //  num.CompleteManuscript = sqlConnect.CompleteManuscript.Count(b => b.Author_ID == id);
             return num;
         }        
     }

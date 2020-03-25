@@ -48,16 +48,16 @@ namespace Contribution_system_Commond.Page
             try
             {
                 SqlConnect sqlConnect = new SqlConnect();
-                var fpath = InfoPath.ModelsPath + "wwwroot/File/MainManuscript/";
+                var fpath = InfoPath.FilePath + "wwwroot/File/MainManuscript/";
                 if (!Directory.Exists(fpath))
                 {
                     Directory.CreateDirectory(fpath);
                 }
-                FileStream stream = new FileStream(InfoPath.ModelsPath + "wwwroot/File/MainManuscript/" + file.FileName, FileMode.Create);
+                FileStream stream = new FileStream(InfoPath.FilePath + "wwwroot/File/MainManuscript/" + file.FileName, FileMode.Create);
                 file.CopyTo(stream);
                 ManuscriptFile fileinfo = new ManuscriptFile();
                 fileinfo.ManuscriptFile_Name = file.Name;
-                fileinfo.ManuscriptFile_Path = fpath + file.FileName;
+                fileinfo.ManuscriptFile_Path = "/wwwroot/File/MainManuscript/" + file.FileName;
                 fileinfo.ManuscriptFile_Type = "Main";
                 fileinfo.Manuscript_ID = MainManuscript;
                 sqlConnect.Update(fileinfo);

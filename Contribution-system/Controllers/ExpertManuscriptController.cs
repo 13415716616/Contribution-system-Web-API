@@ -43,7 +43,7 @@ namespace Contribution_system.Controllers
             sqlConnect.ExpertReview.Add(review);
             sqlConnect.SaveChanges();
             var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == review.Manuscript_ID);
-            info.Manuscript_Status = "等待主编复审";
+            info.Manuscript_Status = "等待编辑复审";
             sqlConnect.Update(review);
             sqlConnect.SaveChanges();
             return Ok();
@@ -55,17 +55,18 @@ namespace Contribution_system.Controllers
         {
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
             SqlConnect sqlConnect = new SqlConnect();
-            var info= sqlConnect.ExpertReview.Where(b => b.Expert_ID ==id ).ToList();
-            ShowExpertReview show = new ShowExpertReview();
+            var info= sqlConnect.ExpertReview.Where(b => b.Expert_ID ==id ).ToList();           
             List<ShowExpertReview> list = new List<ShowExpertReview>();
             foreach(var i in info)
             {
+                ShowExpertReview show = new ShowExpertReview();
                 show.EditorReview_ID = i.ExpertReview_ID;
                 show.Manuscript_ID = i.Manuscript_ID;
                 var a = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == i.Manuscript_ID);
                 show.Manuscript_Title = a.Manuscript_Title;
                 show.Review_Time = i.Review_Time;
                 show.Author_ID = a.Author_ID;
+                show.Manuscript_Keyword = a.Manuscript_Keyword;
                 list.Add(show);
             }
             return Ok(list);

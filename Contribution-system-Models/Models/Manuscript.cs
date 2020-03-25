@@ -33,10 +33,6 @@ namespace Contribution_system_Models.Models
 
         public int ManuscriptColumn_ID { get; set; }
 
-        public string Editor_ID { get; set; }
-
-        public string ChiefEditor_ID { get; set; }
-
         public string Time { get; set; }
     }
 }

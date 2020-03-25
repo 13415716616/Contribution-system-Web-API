@@ -5,7 +5,7 @@
     "id": 1,
     "meta": {
       "icon": "dashboard",
-      "title": "个人首页",
+      "title": "首页信息",
       "show": true
     },
     "component": "RouteView",
@@ -19,7 +19,7 @@
       "title": "我的首页",
       "show": true
     },
-    "component": "Workplace"
+    "component": "EditorWorkplace"
   },
   {
     "name": "EditorManuscript",
@@ -129,6 +129,39 @@
     },
     "component": "GetEndManuscript",
     "path": "/ManagementManuscript/GetEndManuscript"
+  },
+  {
+    "name": "Messages",
+    "parentId": 0,
+    "id": 31,
+    "meta": {
+      "icon": "form",
+      "title": "消息管理"
+    },
+    "redirect": "/Messages/SentMessage",
+    "component": "PageView"
+  },
+  {
+
+    "name": "SentMessage",
+    "parentId": 31,
+    "id": 101,
+    "meta": {
+      "title": "发送消息",
+      "show": true
+    },
+    "component": "EditorSentMessage"
+  },
+  {
+
+    "name": "ShowMessage",
+    "parentId": 31,
+    "id": 1012,
+    "meta": {
+      "title": "查看消息",
+      "show": true
+    },
+    "component": "EditorShowMessage"
   },
   {
     "name": "account",

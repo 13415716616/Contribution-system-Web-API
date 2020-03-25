@@ -34,9 +34,7 @@ namespace Contribution_system_Models
 
         public DbSet<ManuscriptReview> ManuscriptReview { get; set; }
 
-        public DbSet<ChiefEditor> ChiefEditor { get; set; }
-
-        public DbSet<CompleteManuscript> CompleteManuscript { get; set; }
+        public DbSet<ChiefEditor> ChiefEditor { get; set; }      
 
         public DbSet<ManuscriptColumn> ManuscriptColumn{get;set;}
 
@@ -47,6 +45,10 @@ namespace Contribution_system_Models
         public DbSet<ExpertReview> ExpertReview { get; set; }
 
         public DbSet<EditorReview> EditorReview { get; set; }
+
+        public DbSet<Message> Message { get; set; }
+
+        public DbSet<Layout> Layout { get; set; }
 
     }
 }
