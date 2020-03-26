@@ -13,6 +13,7 @@ namespace Contribution_system_Models.WebModel
 
     public class CompleteModels
     {
+        public int id { get; set; }
         public string avtor { get; set; }
 
         public string TiTle { get; set; }

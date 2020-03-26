@@ -71,7 +71,7 @@ namespace Contribution_system.Controllers
         }
 
         [HttpPost("LayoutUpload")]
-        public IActionResult LayoutUpload([FromForm]IFormFile file,int id)
+        public IActionResult LayoutUpload([FromForm]IFormFile file)
         {
             var a =int.Parse(Request.Headers["ManuscriptID"]);
             try
@@ -82,14 +82,13 @@ namespace Contribution_system.Controllers
                 {
                     Directory.CreateDirectory(fpath);
                 }
-                FileStream stream = new FileStream(InfoPath.FilePath + "wwwroot/Layout/Manuscript/" + file.FileName, FileMode.Create);
-                file.CopyTo(stream);
-                Layout fileinfo = new Layout();
-                fileinfo.Manuscript_ID=a;
-                fileinfo.Layout_Image = "/Layout/Manuscript/" + file.FileName;               
-                sqlConnect.Layout.Add(fileinfo);
+                var info = sqlConnect.Layout.FirstOrDefault(b => b.Manuscript_ID == a);
+                info.Layout_Image = "/Layout/Manuscript/" + file.FileName;
+                sqlConnect.Layout.Update(info);
                 sqlConnect.SaveChanges();
-                return Ok(fileinfo.Layout_Image);
+                FileStream stream = new FileStream(InfoPath.FilePath + "wwwroot/Layout/Manuscript/" + file.FileName, FileMode.Create);
+                file.CopyTo(stream);              
+                return Ok(info.Layout_Image);
             }
             catch (Exception e)
             {
@@ -110,6 +109,7 @@ namespace Contribution_system.Controllers
                 layout.TiTle = i.Manuscript_Title;
                 layout.KeyWord = i.Manuscript_Keyword;
                 layout.Time = i.Time;
+                layout.id = i.Manuscript_ID;
                 list.Add(layout);
             }
             return Ok(list);
