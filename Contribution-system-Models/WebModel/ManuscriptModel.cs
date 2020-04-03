@@ -51,4 +51,5 @@ namespace Contribution_system_Models.WebModel
         
         public string ContentText { get; set; }
     }
+
 }

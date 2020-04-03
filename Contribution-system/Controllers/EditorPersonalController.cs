@@ -17,6 +17,7 @@ namespace Contribution_system.Controllers
     [ApiController]
     public class EditorPersonalController : ControllerBase
     {
+            //上传角色图片
             [HttpPost("UpdateEditorImg")]
             [Authorize]
             public IActionResult UpdateEditorImg([FromForm] IFormFile file)
@@ -37,6 +38,7 @@ namespace Contribution_system.Controllers
                 return Ok();
             }
 
+            //获取作者信息
             [HttpGet("GetEditorInfo")]
             [Authorize]
             public IActionResult GetAuthorInfo()

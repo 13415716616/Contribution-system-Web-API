@@ -165,6 +165,17 @@
   },
   {
 
+    "name": "ReadManuscript",
+    "parentId": 11,
+    "id": 103,
+    "meta": {
+      "title": "查看消息",
+      "show": true
+    },
+    "component": "ReadManuscript"
+  },
+  {
+
     "name": "ShowMessage",
     "parentId": 11,
     "id": 1012,

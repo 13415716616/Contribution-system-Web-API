@@ -19,4 +19,15 @@ namespace Contribution_system_Models.WebModel
 
         public string Time { get; set; }
     }
+
+    public class ShowMessage
+    {
+        public string avtor { get; set; }
+
+        public string sentder { get; set; }
+
+        public string Title { get; set; }
+
+        public string Time { get; set; }
+    }
 }

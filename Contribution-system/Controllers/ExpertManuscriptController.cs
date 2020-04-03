@@ -20,7 +20,20 @@ namespace Contribution_system.Controllers
         public IActionResult GetReviewManuscript()
         {
             SqlConnect sqlConnect = new SqlConnect();
-            var info= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待专家审查")).ToList();
+            var info = sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待专家审查"))
+                .Join(sqlConnect.ManuscriptColumn,
+                    manus => manus.ManuscriptColumn_ID,
+                    col => col.ManuscriptColumn_ID,
+                    (mans, col) => new ShowManuscript
+                    {
+                        Manuscript_ID = mans.Manuscript_ID,
+                        Manuscript_Title = mans.Manuscript_Title,
+                        ManuscriptColumn = col.ManuscriptColumn_Name,
+                        Manuscript_Keyword = mans.Manuscript_Keyword,
+                        Manuscript_Status = mans.Manuscript_Status,
+                        Author_Name = mans.Author_ID,
+                        Time = mans.Time,
+                    });
             return Ok(info);
         }
 

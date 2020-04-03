@@ -81,7 +81,7 @@ namespace Contribution_system.Controllers
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;
             SqlConnect sqlConnect = new SqlConnect();
-            var info = sqlConnect.Message.Where(b => b.Message_Recipient == id).ToList();
+            var info = sqlConnect.Message.Where(b => b.Message_Recipient == id);
             return Ok(info);
         }
     }

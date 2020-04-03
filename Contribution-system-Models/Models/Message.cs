@@ -10,6 +10,8 @@ namespace Contribution_system_Models.Models
         [Key]
         public int Message_ID { get; set; }
 
+        public string Message_Type { get; set; }
+
         public string Message_Sender { get; set; }
 
         public string Message_Recipient { get; set; }

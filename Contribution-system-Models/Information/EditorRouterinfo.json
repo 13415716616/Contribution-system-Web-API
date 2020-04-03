@@ -102,7 +102,7 @@
     "id": 18,
     "meta": {
       "title": "审查复审稿件",
-      "show": true
+      "show": false
     },
     "component": "ReviewSecondManuscript",
     "path": "/EditorManuscript/ReviewSecondManuscript"

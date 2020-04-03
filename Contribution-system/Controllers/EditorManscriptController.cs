@@ -30,23 +30,26 @@ namespace Contribution_system.Controllers
             Stopwatch sw = new Stopwatch();
             sw.Start();
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
-            List<Manuscript> list= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑审查")).ToList();
-            var info = new List<ManuscriptTable>();            
-            foreach (var i in list)
-            {
-                ManuscriptTable t = new ManuscriptTable();
-                t.Manuscript_ID = i.Manuscript_ID;
-                t.Manuscript_Title = i.Manuscript_Title;
-                t.Author_ID = i.Author_ID;
-                t.Manuscript_Status = i.Manuscript_Status;
-                t.ManuscriptColumn = sqlConnect.ManuscriptColumn.FirstOrDefault(b => b.ManuscriptColumn_ID == i.ManuscriptColumn_ID).ManuscriptColumn_Name;
-                t.Time = i.Time;
-                info.Add(t);
-            }
+            //List<Manuscript> list= sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑审查")).ToList();
+            var list = sqlConnect.Manuscript.Where(b => b.Manuscript_Status.Equals("等待编辑审查"))
+                .Join(
+                    sqlConnect.ManuscriptColumn,
+                    manus => manus.ManuscriptColumn_ID,
+                    col => col.ManuscriptColumn_ID,
+                    (mans, col) =>new ShowManuscript
+                    {
+                        Manuscript_ID = mans.Manuscript_ID,
+                        Manuscript_Title = mans.Manuscript_Title,
+                        ManuscriptColumn = col.ManuscriptColumn_Name,
+                        Manuscript_Keyword = mans.Manuscript_Keyword,
+                        Manuscript_Status = mans.Manuscript_Status,
+                        Author_Name=mans.Author_ID,
+                        Time = mans.Time,
+                    });
             sw.Stop();
             TimeSpan ts2 = sw.Elapsed;
             Console.WriteLine("Stopwatch总共花费{0}ms.", ts2.TotalMilliseconds);
-            return Ok(info);
+            return Ok(list);
         }
       
 
@@ -122,7 +125,21 @@ namespace Contribution_system.Controllers
         public IActionResult GetEndManuscript()
         {
             var id= User.FindFirst(ClaimTypes.Name)?.Value;
-            var info = sqlConnect.Manuscript.Where(b => b.Manuscript_Status=="等待主编审查"||b.Manuscript_Status=="等待专家审查").ToList();
+            var info = sqlConnect.Manuscript.Where(b => b.Manuscript_Status=="等待主编审查"||b.Manuscript_Status=="等待专家审查")
+                .Join(
+                    sqlConnect.ManuscriptColumn,
+                    manus => manus.ManuscriptColumn_ID,
+                    col => col.ManuscriptColumn_ID,
+                    (mans, col) => new ShowManuscript
+                    {
+                        Manuscript_ID = mans.Manuscript_ID,
+                        Manuscript_Title = mans.Manuscript_Title,
+                        ManuscriptColumn = col.ManuscriptColumn_Name,
+                        Manuscript_Keyword = mans.Manuscript_Keyword,
+                        Manuscript_Status = mans.Manuscript_Status,
+                        Author_Name = mans.Author_ID,
+                        Time = mans.Time,
+                    });
             return Ok(info);
         }
 

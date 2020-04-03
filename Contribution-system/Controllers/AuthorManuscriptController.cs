@@ -143,7 +143,7 @@ namespace Contribution_system.Controllers
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
             var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == manuscript.Manuscript_ID);
             info.Manuscript_Status = "等待编辑审查";
-            MessageApi.SystemMessage("【系统消息】", id, "你的稿件投递完成","你的稿件投递完成，正在等待编辑审核中");
+            MessageApi.SystemMessage("【系统消息】", id, "你的稿件投递完成", "<h3><span style='font - weight: bold; '>作者你好：</span></h3><h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='font - weight: bold; '>您的稿件" + info.Manuscript_Title + "投递成功，正在等待编辑初审，请耐心等待。</span></h3><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;稿件标题：" + info.Manuscript_Title + "<br></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;投递时间：" + info.Time + "<br></p><h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='font - weight: bold; '>稿件审查进度我们将以信息的方式通知您，请注意查看。</span></h3>");
             sqlConnect.Update(info);
             sqlConnect.SaveChanges();
             return Ok();
@@ -156,7 +156,7 @@ namespace Contribution_system.Controllers
             var info = sqlConnect.Manuscript.FirstOrDefault(b => b.Manuscript_ID == id);
             info.Manuscript_Status = "等待编辑审查";
             var uid = User.FindFirst(ClaimTypes.Name)?.Value;
-            MessageApi.SystemMessage("【系统消息】", uid, "你的稿件投递完成", "你的稿件投递完成，正在等待编辑审核中");
+            MessageApi.SystemMessage("【系统消息】", uid, "你的稿件投递完成", "<h3><span style='font - weight: bold; '>作者你好：</span></h3><h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='font - weight: bold; '>您的稿件"+info.Manuscript_Title+"投递成功，正在等待编辑初审，请耐心等待。</span></h3><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;稿件标题："+info.Manuscript_Title+"<br></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;投递时间："+info.Time+"<br></p><h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style='font - weight: bold; '>稿件审查进度我们将以信息的方式通知您，请注意查看。</span></h3>");
             sqlConnect.Update(info);
             sqlConnect.SaveChanges();
             return Ok();
@@ -183,8 +183,19 @@ namespace Contribution_system.Controllers
         [HttpGet("GetReviewManuscript")]
         public IActionResult GetReviewManuscript()
         {
-            var id= User.FindFirst(ClaimTypes.Name)?.Value;
-            var info = sqlConnect.Manuscript.Where(b => b.Author_ID == id&&b.Manuscript_Status!="稿件编辑中"&&b.Manuscript_Status!="稿件通过").ToList();
+            var id= User.FindFirst(ClaimTypes.Name)?.Value; 
+             var info = sqlConnect.Manuscript.Where(b => b.Author_ID == id&&b.Manuscript_Status!="稿件编辑中"&&b.Manuscript_Status!="稿件通过")
+                .Join(sqlConnect.ManuscriptColumn,man=>man.ManuscriptColumn_ID,col=>col.ManuscriptColumn_ID,(man,col)=>
+                new ShowManuscript
+                {
+                    Manuscript_ID=man.Manuscript_ID,
+                    Manuscript_Title=man.Manuscript_Title,
+                    Manuscript_Keyword=man.Manuscript_Keyword,
+                    Manuscript_Status=man.Manuscript_Status,
+                    Time=man.Time,
+                    Author_Name=man.Author_ID,
+                    ManuscriptColumn=col.ManuscriptColumn_Name
+                });
             return Ok(info);
         }
     }
