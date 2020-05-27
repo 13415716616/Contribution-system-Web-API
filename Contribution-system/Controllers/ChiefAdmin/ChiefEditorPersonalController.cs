@@ -71,5 +71,18 @@ namespace Contribution_system.Controllers
             ChiefEditorManuscriptInfo info = new ChiefEditorManuscriptInfo();
             return Ok();
         }
+
+        [HttpPost("SentMessage")]
+        public IActionResult SentMessage([FromBody] Message message)
+        {
+            var id = User.FindFirst(ClaimTypes.Name)?.Value;
+            message.Message_Sender = id;
+            message.Message_Time = DateTime.Now.ToString();
+            message.Message_Type = "【主编信息】";
+            SqlConnect sqlConnect = new SqlConnect();
+            sqlConnect.Message.Add(message);
+            sqlConnect.SaveChanges();
+            return Ok();
+        }
     }
 }

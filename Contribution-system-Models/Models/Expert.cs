@@ -27,6 +27,8 @@ namespace Contribution_system_Models.Models
         public string Expert_Phone { get; set; }
 
         public string Expert_Address { get; set; }
+        
+        public int Expert_Filed { get; set; }
 
         public string Expert_Dec { get; set; }
         

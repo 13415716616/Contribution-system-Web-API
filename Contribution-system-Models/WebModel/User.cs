@@ -31,7 +31,9 @@ namespace Contribution_system_Models.WebModel
 
         static public string ChiefEditorRouterInfo = ModelsPath + "Information/ChiefEditorRouterInfo.json";
 
-        static public string ExpertRouterInfo = ModelsPath + "Information/ExpertRouterInfo.json";
+        static public string ExpertRouterInfo = ModelsPath + "Information/ExpertRouterInfo.json"; 
+
+        static public string AdminRouterInfo = ModelsPath + "Information/AdminRouterInfo.json";
 
         static public class getpath
         {

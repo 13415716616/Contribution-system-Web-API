@@ -32,7 +32,6 @@ namespace Contribution_system_Models.Models
         public string Manuscript_Status { get; set; }
 
         public int ManuscriptColumn_ID { get; set; }
-
         public string Time { get; set; }
     }
 }

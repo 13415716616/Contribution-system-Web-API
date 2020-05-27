@@ -41,6 +41,12 @@ namespace Contribution_system_Commond.Page
         public static string GetLoginRoleToken(LoginInfo loginInfo)
         {
             SqlConnect sqlConnect=new SqlConnect();
+            var admin = sqlConnect.Admins.FirstOrDefault(b => b.Admin_ID.Equals(loginInfo.username));
+            if (admin != null && UserCommond.GetMD5Hash(admin.Admin_Password).Equals(loginInfo.password))
+            {
+                string token = UserCommond.SetToken(loginInfo.username, "Admin");
+                return token;
+            }
             var chiefeditor = sqlConnect.ChiefEditor.FirstOrDefault(c => c.ChiefEditor_ID.Equals(loginInfo.username));
             if (chiefeditor != null && UserCommond.GetMD5Hash(chiefeditor.ChiefEditor_Password).Equals(loginInfo.password))
             {
@@ -75,6 +81,8 @@ namespace Contribution_system_Commond.Page
         /// <returns></returns>
         public static string GetLoginRoleRoutor(string Role)
         {
+            if (Role.Equals("Admin"))
+                return System.IO.File.ReadAllText(InfoPath.AdminRouterInfo);
             if (Role.Equals("ChiefEditor"))
                 return System.IO.File.ReadAllText(InfoPath.ChiefEditorRouterInfo);
             if (Role.Equals("Editor"))
@@ -96,6 +104,18 @@ namespace Contribution_system_Commond.Page
         public static string GetLoginInfo(string id,string role)
         {
             SqlConnect sqlConnect = new SqlConnect();
+            if (role.Equals("Admin"))
+            {
+                var info = sqlConnect.Admins.FirstOrDefault(b => b.Admin_ID.Equals(id));
+                UserRoleInfo userRole = new UserRoleInfo();
+                userRole.id = id;
+                userRole.name = info.Admin_Name;
+                userRole.avatar = "/avatar2.jpg";
+                Console.WriteLine(InfoPath.ModelsPath);
+                userRole.role = JObject.Parse(System.IO.File.ReadAllText(InfoPath.AuthorRole));
+                var s = JsonConvert.SerializeObject(userRole);
+                return JsonConvert.SerializeObject(userRole);
+            }
             if (role.Equals("ChiefEditor"))
             {
                 var info = sqlConnect.ChiefEditor.FirstOrDefault(b => b.ChiefEditor_ID.Equals(id));

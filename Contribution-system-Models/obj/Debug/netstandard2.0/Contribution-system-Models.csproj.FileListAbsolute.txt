@@ -53,3 +53,4 @@ E:\毕业设计\Contribution-system-Web-API\Contribution-system-Models\obj\Debug
 E:\毕业设计\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.dll
 E:\毕业设计\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.pdb
 E:\毕业设计\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.csprojAssemblyReference.cache
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Models\obj\Debug\netstandard2.0\Contribution-system-Models.csproj.CoreCompileInputs.cache

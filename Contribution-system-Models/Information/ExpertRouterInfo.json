@@ -9,10 +9,10 @@
       "show": true
     },
     "component": "RouteView",
-    "redirect": "/dashboard/ExpertWorkplace"
+    "redirect": "/dashboard/workplace"
   },
   {
-    "name": "ExpertWorkplace",
+    "name": "workplace",
     "parentId": 1,
     "id": 7,
     "meta": {
@@ -94,6 +94,16 @@
     "component": "ShowExpertComplete"
   },
   {
+    "name": "ReadComplete",
+    "parentId": 3,
+    "id": 38,
+    "meta": {
+      "title": "查阅稿件",
+      "show": false
+    },
+    "component": "ReadComplete"
+  },
+  {
     "name": "MyReviewManuscript",
     "parentId": 3,
     "id": 36,
@@ -127,6 +137,17 @@
   },
   {
 
+    "name": "ReadManuscript",
+    "parentId": 11,
+    "id": 103,
+    "meta": {
+      "title": "查看消息",
+      "show": false
+    },
+    "component": "ReadManuscript"
+  },
+  {
+
     "name": "ShowMessage",
     "parentId": 11,
     "id": 1012,
@@ -154,7 +175,7 @@
     "id": 10029,
     "meta": {
       "title": "个人中心",
-      "show": true
+      "show": false
     },
     "component": "ExpertAccountCenter"
   },

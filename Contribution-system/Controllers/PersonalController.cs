@@ -32,22 +32,22 @@ namespace Contribution_system.Controllers
             }
         }
 
-        //添加作者的Tags标签函数
-        [HttpGet("AddAuthorTags")]
-        [Authorize]
-        public IActionResult AddAuthorTags(string tags)
-        {
-            try
-            {
-                var id = User.FindFirst(ClaimTypes.Name)?.Value;
-                PersonalPageAPI.AddAuthorTags(tags, id);
-                return Ok();
-            }
-            catch
-            {
-                return BadRequest();
-            }
-        }
+        ////添加作者的Tags标签函数
+        //[HttpGet("AddAuthorTags")]
+        //[Authorize]
+        //public IActionResult AddAuthorTags(string tags)
+        //{
+        //    try
+        //    {
+        //        var id = User.FindFirst(ClaimTypes.Name)?.Value;
+        //        PersonalPageAPI.AddAuthorTags(tags, id);
+        //        return Ok();
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
 
         //[HttpGet("GetCompleteManuscript")]
         //public IActionResult GetCompleteManuscript()
@@ -56,15 +56,6 @@ namespace Contribution_system.Controllers
         //    var list= PersonalPageAPI.GetCompleteManuscript(id);
         //    return Ok(list);
         //}
-
-        //获取稿件个数
-        [HttpGet("GetAuthorManuscriptNum")]
-        [Authorize]
-        public IActionResult GetAuthorManuscriptNum()
-        {
-            var id = User.FindFirst((ClaimTypes.Role))?.Value;
-            return Ok(PersonalPageAPI.GetAuthorManuscriptNumNum(id));
-        }
         
         //获取修改的信息
         [HttpPost("UpdateAuthorInfo")]

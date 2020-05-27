@@ -25,44 +25,34 @@ namespace Contribution_system_Commond.Page
             return info;
         }
 
-        public static bool AddAuthorTags(string tag,string id)
-        {
-            try { 
-                SqlConnect sqlConnect = new SqlConnect();
-                var info = sqlConnect.Authors.FirstOrDefault(b => b.Author_ID.Equals(id));
-                if (info.Author_tags == null || info.Author_tags == "")
-                {
-                    List<string> tags = new List<string>();
-                    tags.Add(tag);
-                    info.Author_tags = JsonConvert.SerializeObject(tags);
-                    sqlConnect.Update(info);
-                    sqlConnect.SaveChanges();
-                    return true;
-                }
-                else
-                {
-                    List<string> tags = JsonConvert.DeserializeObject<List<string>>(info.Author_tags);
-                    tags.Add(tag);
-                    info.Author_tags = JsonConvert.SerializeObject(tags);
-                    sqlConnect.Update(info);
-                    sqlConnect.SaveChanges();
-                    return true;
-                }
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        public static AuthorManuscriptNum GetAuthorManuscriptNumNum(string id)
-        {
-            SqlConnect sqlConnect=new SqlConnect();
-            AuthorManuscriptNum num=new AuthorManuscriptNum();
-            num.DarftManuscript = sqlConnect.Manuscript.Count(b => b.Author_ID == id);
-            num.ReviewsManusript = sqlConnect.ManuscriptReview.Count(b => b.Author_ID == id);
-          //  num.CompleteManuscript = sqlConnect.CompleteManuscript.Count(b => b.Author_ID == id);
-            return num;
-        }        
+        //public static bool AddAuthorTags(string tag,string id)
+        //{
+        //    try { 
+        //        SqlConnect sqlConnect = new SqlConnect();
+        //        var info = sqlConnect.Authors.FirstOrDefault(b => b.Author_ID.Equals(id));
+        //        if (info.Author_tags == null || info.Author_tags == "")
+        //        {
+        //            List<string> tags = new List<string>();
+        //            tags.Add(tag);
+        //            info.Author_tags = JsonConvert.SerializeObject(tags);
+        //            sqlConnect.Update(info);
+        //            sqlConnect.SaveChanges();
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            List<string> tags = JsonConvert.DeserializeObject<List<string>>(info.Author_tags);
+        //            tags.Add(tag);
+        //            info.Author_tags = JsonConvert.SerializeObject(tags);
+        //            sqlConnect.Update(info);
+        //            sqlConnect.SaveChanges();
+        //            return true;
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        return false;
+        //    }
+        //}       
     }
 }

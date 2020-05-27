@@ -125,6 +125,26 @@
     "component": "ShowCompleteManuscript"
   },
   {
+    "name": "ManuscriptAdmin",
+    "parentId": 71,
+    "id": 712,
+    "meta": {
+      "title": "管理稿件",
+      "show": true
+    },
+    "component": "ManuscriptAdmin"
+  },
+  {
+    "name": "AdminEditManuscript",
+    "parentId": 71,
+    "id": 712,
+    "meta": {
+      "title": "修改稿件",
+      "show": false
+    },
+    "component": "AdminEditManuscript"
+  },
+  {
     "name": "Messages",
     "parentId": 0,
     "id": 11,
@@ -158,6 +178,83 @@
     "component": "ChiefEditorShowMessage"
   },
   {
+    "name": "UserAdmin",
+    "parentId": 0,
+    "id": 80,
+    "meta": {
+      "icon": "form",
+      "title": "用户管理"
+    },
+    "redirect": "/UserAdmin/ManageAuthor",
+    "component": "PageView"
+  },
+  {
+
+    "name": "ManageAuthor",
+    "parentId": 80,
+    "id": 81,
+    "meta": {
+      "title": "作者信息管理",
+      "show": true
+    },
+    "component": "ManageAuthor"
+  },
+  {
+
+    "name": "ManageEditor",
+    "parentId": 80,
+    "id": 82,
+    "meta": {
+      "title": "编辑信息管理",
+      "show": true
+    },
+    "component": "ManageEditor"
+  },
+  {
+
+    "name": "ManageExpert",
+    "parentId": 80,
+    "id": 83,
+    "meta": {
+      "title": "专家信息管理",
+      "show": true
+    },
+    "component": "ManageExpert"
+  },
+  {
+    "name": "Other",
+    "parentId": 0,
+    "id": 90,
+    "meta": {
+      "icon": "form",
+      "title": "其他管理"
+    },
+    "redirect": "/Other/ExpertFiled",
+    "component": "PageView"
+  },
+  {
+
+    "name": "ExpertFiled",
+    "parentId": 90,
+    "id": 91,
+    "meta": {
+      "title": "专家领域信息管理",
+      "show": true
+    },
+    "component": "ExpertFiled"
+  },
+  {
+
+    "name": "ColomAdmin",
+    "parentId": 90,
+    "id": 92,
+    "meta": {
+      "title": "稿件栏目信息管理",
+      "show": true
+    },
+    "component": "ColomAdmin"
+  },
+  {
     "name": "account",
     "parentId": 0,
     "id": 10028,
@@ -175,7 +272,7 @@
     "id": 10029,
     "meta": {
       "title": "个人中心",
-      "show": true
+      "show": false
     },
     "component": "ChiefEditorAccountCenter"
   },

@@ -21,17 +21,11 @@ namespace Contribution_system_Models.Models
 
         public string ManuscriptAuthor_Education { get; set; }
 
-        public string ManuscriptAuthor_Major { get; set; }
+        public string ManuscriptAuthor_Phone { get; set; }
 
-        public string ManuscriptAuthor_Occupation { get; set; }
-
-        public string ManuscriptAuthor_Work { get; set; }
-
-         public string ManuscriptAuthor_Phone { get; set; }
+        public string ManuscriptAuthor_Email { get; set; }
 
         public string ManuscriptAuthor_Address { get; set; }
-
-        public string ManuscriptAuthor_Dec { get; set; }
 
         //[ForeignKey("Manuscript_ID")]
         //public virtual Manuscript Manuscript { get; set; }

@@ -70,6 +70,7 @@ namespace Contribution_system.Controllers
             var id = User.FindFirst(ClaimTypes.Name)?.Value;
             message.Message_Sender = id;
             message.Message_Time = DateTime.Now.ToString();
+            message.Message_Type = "【作者信息】";
             SqlConnect sqlConnect = new SqlConnect();
             sqlConnect.Message.Add(message);
             sqlConnect.SaveChanges();

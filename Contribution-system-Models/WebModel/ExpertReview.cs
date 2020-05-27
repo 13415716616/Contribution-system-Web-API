@@ -16,6 +16,8 @@ namespace Contribution_system_Models.WebModel
 
         public string Author_ID { get; set; }
 
+        public string ManuscriptColumn { get; set; }
+
         public string Review_Time { get; set; }
     }
 }

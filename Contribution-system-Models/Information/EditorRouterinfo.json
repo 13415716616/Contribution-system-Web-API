@@ -56,17 +56,6 @@
     "path": "/EditorManuscript/ReviewFirstManuscript"
   },
   {
-    "name": "ManuscriptEnquiry",
-    "parentId": 10,
-    "id": 12,
-    "meta": {
-      "title": "复审稿件",
-      "show": true
-    },
-    "component": "ManuscriptEnquiry",
-    "path": "/EditorManuscript/ManuscriptEnquiry"
-  },
-  {
     "name": "ShowEditManuscript",
     "parentId": 10,
     "id": 13,
@@ -131,6 +120,17 @@
     "path": "/ManagementManuscript/GetEndManuscript"
   },
   {
+    "name": "GetCompleteManuscript",
+    "parentId": 50,
+    "id": 58,
+    "meta": {
+      "title": "通过稿件",
+      "show": true
+    },
+    "component": "GetCompleteManuscript",
+    "path": "/ManagementManuscript/GetCompleteManuscript"
+  },
+  {
     "name": "Messages",
     "parentId": 0,
     "id": 31,
@@ -154,6 +154,17 @@
   },
   {
 
+    "name": "ReadEditorMessage",
+    "parentId": 31,
+    "id": 1033,
+    "meta": {
+      "title": "查看消息",
+      "show": false
+    },
+    "component": "ReadEditorMessage"
+  },
+  {
+
     "name": "ShowMessage",
     "parentId": 31,
     "id": 1012,
@@ -162,6 +173,28 @@
       "show": true
     },
     "component": "EditorShowMessage"
+  },
+  {
+    "name": "UserAdmin",
+    "parentId": 0,
+    "id": 80,
+    "meta": {
+      "icon": "form",
+      "title": "用户管理"
+    },
+    "redirect": "/UserAdmin/ManageAuthor",
+    "component": "PageView"
+  },
+  {
+
+    "name": "ManageAuthor",
+    "parentId": 80,
+    "id": 81,
+    "meta": {
+      "title": "作者信息管理",
+      "show": true
+    },
+    "component": "ManageAuthor"
   },
   {
     "name": "account",

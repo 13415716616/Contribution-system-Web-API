@@ -1,0 +1,143 @@
+﻿[
+  {
+    "name": "dashboard",
+    "parentId": 0,
+    "id": 1,
+    "meta": {
+      "icon": "dashboard",
+      "title": "仪表盘",
+      "show": true
+    },
+    "component": "RouteView",
+    "redirect": "/User/ManageAuthor"
+  },
+  {
+    "name": "workplace",
+    "parentId": 1,
+    "id": 7,
+    "meta": {
+      "title": "工作台",
+      "show": true
+    },
+    "component": "Workplace"
+  },
+  {
+    "name": "User",
+    "parentId": 0,
+    "id": 3,
+    "meta": {
+      "icon": "form",
+      "title": "用户管理"
+    },
+    "redirect": "/User/ManageAuthor",
+    "component": "PageView"
+  },
+  {
+
+    "name": "ManageAuthor",
+    "parentId": 3,
+    "id": 31,
+    "meta": {
+      "title": "作者信息管理",
+      "show": true
+    },
+    "component": "ManageAuthor"
+  },
+  {
+
+    "name": "ManageEditor",
+    "parentId": 3,
+    "id": 32,
+    "meta": {
+      "title": "编辑信息管理",
+      "show": true
+    },
+    "component": "ManageEditor"
+  },
+  {
+
+    "name": "ManageExpert",
+    "parentId": 3,
+    "id": 32,
+    "meta": {
+      "title": "专家信息管理",
+      "show": true
+    },
+    "component": "ManageExpert"
+  },
+  {
+
+    "name": "ChiefEditorAdmin",
+    "parentId": 3,
+    "id": 33,
+    "meta": {
+      "title": "主编信息管理",
+      "show": true
+    },
+    "component": "ChiefEditorAdmin"
+  },
+  {
+    "name": "Other",
+    "parentId": 0,
+    "id": 5,
+    "meta": {
+      "icon": "form",
+      "title": "其他管理"
+    },
+    "redirect": "/Other/ExpertFiled",
+    "component": "PageView"
+  },
+  {
+
+    "name": "ExpertFiled",
+    "parentId": 5,
+    "id": 51,
+    "meta": {
+      "title": "专家领域信息管理",
+      "show": true
+    },
+    "component": "ExpertFiled"
+  },
+  {
+
+    "name": "ColomAdmin",
+    "parentId": 5,
+    "id": 52,
+    "meta": {
+      "title": "稿件栏目信息管理",
+      "show": true
+    },
+    "component": "ColomAdmin"
+  },
+  {
+    "name": "ManuscriptManage",
+    "parentId": 0,
+    "id": 71,
+    "meta": {
+      "icon": "form",
+      "title": "稿件管理"
+    },
+    "redirect": "/ManuscriptManage/ShowCompleteManuscript",
+    "component": "PageView"
+  },
+  {
+    "name": "ShowCompleteManuscript",
+    "parentId": 71,
+    "id": 711,
+    "meta": {
+      "title": "通过稿件",
+      "show": true
+    },
+    "component": "ShowCompleteManuscript"
+  },
+  {
+    "name": "ManuscriptAdmin",
+    "parentId": 71,
+    "id": 712,
+    "meta": {
+      "title": "管理稿件",
+      "show": true
+    },
+    "component": "ManuscriptAdmin"
+  }
+]

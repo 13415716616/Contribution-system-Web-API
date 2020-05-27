@@ -18,6 +18,8 @@ namespace Contribution_system_Models.WebModel
 
         public string ManuscriptColumn { get; set; }
 
+        public int ManuscriptColumn_ID { get; set; }
+
         public string Time { get; set; }
 
     }

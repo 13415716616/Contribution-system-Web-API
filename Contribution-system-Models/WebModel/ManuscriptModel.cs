@@ -38,6 +38,8 @@ namespace Contribution_system_Models.WebModel
 
         public string ManuscriptColumn_ID { get; set; }
 
+        public string Manuscript_KeyWork { get; set; }
+
         public string Author_ID { get; set; }
 
         public string Time { get; set; }
@@ -45,9 +47,11 @@ namespace Contribution_system_Models.WebModel
         public string File { get; set; }
     }
 
-    public class FirstReview
+    public class Review
     {
         public int Manuscript_ID { get; set; }
+
+        public string Filed_ID { get; set; }
         
         public string ContentText { get; set; }
     }

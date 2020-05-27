@@ -11,10 +11,12 @@ namespace Contribution_system_Commond.Page
         public static bool SystemMessage(string Message_Sender, string Recipient,string Message_Title,string Message_Content)
         {
             Message message = new Message();
+            message.Message_Type = "【系统消息】";
             message.Message_Sender = Message_Sender;
             message.Message_Recipient = Recipient;
             message.Message_Title = Message_Title;
             message.Message_Content = Message_Content;
+            message.Message_Time = DateTime.Now.ToString();
             SqlConnect sqlConnect = new SqlConnect();
             sqlConnect.Message.Add(message);
             sqlConnect.SaveChanges();

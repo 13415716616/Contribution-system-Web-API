@@ -992,3 +992,5 @@ E:\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcor
 E:\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.csproj.CopyComplete
 E:\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.dll
 E:\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.pdb
+E:\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.csproj.CoreCompileInputs.cache
+E:\毕业设计\Contribution-system-Web-API\Contribution-system\obj\Debug\netcoreapp3.1\Contribution-system.genruntimeconfig.cache

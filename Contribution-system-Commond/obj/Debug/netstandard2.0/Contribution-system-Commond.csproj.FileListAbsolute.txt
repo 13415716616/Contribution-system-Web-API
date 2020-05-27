@@ -72,3 +72,4 @@ E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debu
 E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csproj.CopyComplete
 E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.dll
 E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.pdb
+E:\毕业设计\Contribution-system-Web-API\Contribution-system-Commond\obj\Debug\netstandard2.0\Contribution-system-Commond.csproj.CoreCompileInputs.cache

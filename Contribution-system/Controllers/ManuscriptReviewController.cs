@@ -22,23 +22,5 @@ namespace Contribution_system.Controllers
         {
             sqlConnect = _sqlConnect;
         }
-
-        //获取用户所有投稿的稿件
-        [HttpGet]
-        public IActionResult GetAllManuscript()
-        {
-            var id = User.FindFirst(ClaimTypes.Name)?.Value;
-            List<ManuscriptReview> reviews = new List<ManuscriptReview>();
-            reviews = sqlConnect.ManuscriptReview.Where(b => b.Author_ID.Equals(id)).ToList();
-            return Ok(reviews);
-        } 
-        
-        [HttpGet("ShowManuscriptReviews")]
-        public IActionResult GetAllManuscript(int id)
-        {
-            ManuscriptReview review = new ManuscriptReview();
-            review = sqlConnect.ManuscriptReview.FirstOrDefault(a => a.ManuscriptReview_ID.Equals(id));
-            return Ok(review);
-        }
     }
 }
